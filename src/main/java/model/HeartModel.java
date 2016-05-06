@@ -1,4 +1,4 @@
-package headfirst;
+package model;
 
 import java.util.*;
 

@@ -1,5 +1,8 @@
-package headfirst;
-  
+package controller;
+
+import model.BeatModelInterface;
+import view.DJView;
+
 public class BeatController implements ControllerInterface {
 	BeatModelInterface model;
 	DJView view;

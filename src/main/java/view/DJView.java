@@ -1,8 +1,13 @@
-package headfirst;
+package view;
     
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
+import controller.ControllerInterface;
+import model.BPMObserver;
+import model.BeatModelInterface;
+import model.BeatObserver;
 
 public class DJView implements ActionListener,  BeatObserver, BPMObserver {
 	BeatModelInterface model;

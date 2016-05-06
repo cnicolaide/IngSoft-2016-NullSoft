@@ -1,4 +1,4 @@
-package headfirst;
+package model;
 
 public interface HeartModelInterface {
 	int getHeartRate();

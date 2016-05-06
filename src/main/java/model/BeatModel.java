@@ -1,6 +1,7 @@
-package headfirst;
+package model;
   
 import javax.sound.midi.*;
+
 import java.util.*;
 
 public class BeatModel implements BeatModelInterface, MetaEventListener {

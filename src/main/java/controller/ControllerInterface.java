@@ -1,4 +1,4 @@
-package headfirst;
+package controller;
   
 public interface ControllerInterface {
 	void start();

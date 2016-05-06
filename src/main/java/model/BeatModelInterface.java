@@ -1,5 +1,5 @@
-package headfirst;
-  
+package model;
+
 public interface BeatModelInterface {
 	void initialize();
   

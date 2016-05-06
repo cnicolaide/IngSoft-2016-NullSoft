@@ -1,5 +1,9 @@
-package headfirst;
-  
+package controller;
+
+import model.HeartAdapter;
+import model.HeartModelInterface;
+import view.DJView;
+
 public class HeartController implements ControllerInterface {
 	HeartModelInterface model;
 	DJView view;

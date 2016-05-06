@@ -1,4 +1,4 @@
-package headfirst;
+package view;
   
 import java.awt.*;
 import java.awt.event.*;

@@ -1,4 +1,4 @@
-package headfirst;
+package model;
 
 public class HeartAdapter implements BeatModelInterface {
 	HeartModelInterface heart;
