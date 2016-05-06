@@ -1,4 +1,4 @@
-package headfirst.combined.djview;
+package headfirst;
 
 import java.util.*;
 

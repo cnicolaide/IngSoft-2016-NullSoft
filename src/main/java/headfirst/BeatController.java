@@ -1,4 +1,4 @@
-package headfirst.combined.djview;
+package headfirst;
   
 public class BeatController implements ControllerInterface {
 	BeatModelInterface model;
