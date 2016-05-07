@@ -1,11 +1,11 @@
 package view;
-  
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class BeatBar extends JProgressBar implements Runnable { 
-    JProgressBar progressBar;
+public class BeatBar extends JProgressBar implements Runnable {
+	JProgressBar progressBar;
 	Thread thread;
 
 	public BeatBar() {
@@ -15,14 +15,16 @@ public class BeatBar extends JProgressBar implements Runnable {
 	}
 
 	public void run() {
-		for(;;) {
+		for (;;) {
 			int value = getValue();
-			value = (int)(value * .75);
+			value = (int) (value * .75);
 			setValue(value);
 			repaint();
 			try {
 				Thread.sleep(50);
-			} catch (Exception e) {};
+			} catch (Exception e) {
+			}
+			;
 		}
 	}
 }
