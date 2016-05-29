@@ -14,7 +14,7 @@
 ### Propósito y alcance
 
 SCM es el proceso mediante el cual se identifican los métodos y herramientas para controlar el software a lo largo de su desarrollo y utilización.
-En esta seccion se describe la forma de trabajo, los documentos, el hardware, software y las herramientas utilizadas en este proyecto.
+En esta sección se describe la forma de trabajo, los documentos, el hardware, software y las herramientas utilizadas en este proyecto.
 
 ### Propósito del Manejo de la Configuración del Software (SCM)
 
@@ -37,7 +37,7 @@ En esta seccion se describe la forma de trabajo, los documentos, el hardware, so
 
 - **Lenguaje de Programación:** Java [https://www.java.com](https://www.java.com)
 - **Entorno de Desarrollo:** Netbeans IDE [https://netbeans.org/](https://netbeans.org/) 
-- **Software de Manejo de Versiones:** Git [https://git­scm.com/](https://git­scm.com/)
+- **Software de Manejo de Versiones:** Git [https://git¬scm.com/](https://git¬scm.com/)
 - **Sistema de Control de Versiones:** GitHub [https://github.com/cnicolaide/IngSoft-2016-NullSoft](https://github.com/cnicolaide/IngSoft-2016-NullSoft)
 - **Sistema de Seguimiento de Errores:** Git Issues [https://github.com/cnicolaide/IngSoft-2016-NullSoft/issues](https://github.com/cnicolaide/IngSoft-2016-NullSoft/issues)
 - **Herramienta de Integración Continua:** Travis [https://travis-ci.org/cnicolaide/IngSoft-2016-NullSoft](https://travis-ci.org/cnicolaide/IngSoft-2016-NullSoft)
@@ -49,7 +49,7 @@ En esta seccion se describe la forma de trabajo, los documentos, el hardware, so
 
 **SCI:** Software Configuration Item, Elemento de Configuración del Software. Son los elementos creados durante el proceso. Pueden ser de tres tipos:
 De Software: código fuente, recursos gráficos, bibliotecas, ejecutables
-Documentos:técnicos, administrativos y de usuario
+Documentos: técnicos, administrativos y de usuario
 Estructuras de datos: estructura de base de datos, datos iniciales, archivos de configuración, etc.
 
 **Check Out:** Tomar un SCI del repositorio y copiarlo en un área de trabajo, dejando bloqueado el SCI en el repositorio, para que nadie más pueda hacer un check out del mismo.
@@ -97,11 +97,11 @@ Cada uno de estos números tienen el siguiente significado:
 - **revision**: se modifican cuando hay revisiones de código ante fallos de la aplicación.
 - **entrega**: este dígito tiene el objetivo de llevar la cuenta del número de veces que una entrega se rechaza, por incumplimiento de algún requisitos de la gestión de entregas o del proyecto.
 
-En el caso de la creación de un branch o linea de desarrollo distinta de la principal añadiremos la letra b al final de la numeración. 
+En el caso de la creación de un branch o línea de desarrollo distinta de la principal añadiremos la letra b al final de la numeración. 
 
 ### d. Plan del esquema de ramas a usar (y en uso).
 
-Entendiendo que un branch es una linea de desarrollo distinta de la principal. Generalmente se trabajara sobre el trunk del proyecto, pero en ciertas ocasiones podrá ser necesario crear una linea de desarrollo paralela, para esto se utilizaran los branch.
+Entendiendo que un branch es una línea de desarrollo distinta de la principal. Generalmente se trabajara sobre el trunk del proyecto, pero en ciertas ocasiones podrá ser necesario crear una línea de desarrollo paralela, para esto se utilizaran los branch.
 
 Imaginando que tenemos nuestro proyecto con una linea de desarrollo principal (sobre el trunk), y que en ciertos momentos algunas de las versiones (tags) que se marcaron pasaron al entorno de producción. Pero en un determinado momento se detecta un error critico o una tarea (por ejemplo cambiar la integración con otra aplicación) y hay que abordarla de forma rápida sobre la versión que hay en producción y si pasar toda la nueva funcionalidad de las versiones que la siguieron y que no han pasado por un proceso de pruebas.
 
@@ -110,11 +110,11 @@ En este caso el equipo debe de crear un branch sobre el tag que marca la versió
 ![](http://www.juntadeandalucia.es/servicios/madeja/sites/default/files/imagecache/wysiwyg_imageupload_big/wysiwyg_imageupload/10/branchs.jpg)
 
 Una vez finalizada la tarea tendremos una versión que podremos desplegar (pasando por el procedimiento de entrega y pruebas previamente) en producción.
-Para evitar que se repitan tareas en las distintas lineas, cada branch debe representar el desarrollo una tarea concreta para que se vuelva a integrar en la linea principal de desarrollo en poco tiempo, de esta manera la tarea de integración sera menos costosa.
+Para evitar que se repitan tareas en las distintas líneas, cada branch debe representar el desarrollo una tarea concreta para que se vuelva a integrar en la línea principal de desarrollo en poco tiempo, de esta manera la tarea de integración será menos costosa.
 
 ### e. Políticas de fusión de archivos y de etiquetado de acuerdo al progreso de calidad en los entregables.
 
-Para fusionar nuevas ramas que pudieran surgir con el código principal nuevamente, el administrador realizara la fusión haciendo un rebase del código junto a los desarrolladores. De esta forma rápidamente se podran identificar errores, los desarrolladores podran trabajar en resolverlos y el administrador estára al tanto de la situación para coordinar otro eventual cambio en el código.
+Para fusionar nuevas ramas que pudieran surgir con el código principal nuevamente, el administrador realizara la fusión haciendo un rebase del código junto a los desarrolladores. De esta forma rápidamente se podrán identificar errores, los desarrolladores podrán trabajar en resolverlos y el administrador estará al tanto de la situación para coordinar otro eventual cambio en el código.
 
 Los criterios para modificar (incrementar) cada uno de los contadores de la etiqueta de versión son los siguientes:
 
@@ -139,7 +139,7 @@ El CCC es responsable de aprobar, monitorear y controlar cada solicitud de cambi
 El alcance del trabajo será aprobar o rechazar los cambios necesarios en planes, documentos y códigos. Las decisiones deberán ser tomadas respecto a las acciones que deberán estar basadas en la calidad del producto, asegurando el correcto estado del producto después de cada ciclo de prueba.
 El CCC puede estar conformado por una o varias personas, pero es importante que estas tengan una visión global del proyecto.
 La decisión del CCC y sus apreciaciones se registran en los apartados correspondientes del formulario del cambio.
-Si el CCC aprueba el cambio, se genera la asignación de la tarea de llevar a cabo dicho cambio. Esta asignación y el formulario de cambio correspondientes, llegarán al SCMer .
+Si el CCC aprueba el cambio, se genera la asignación de la tarea de llevar a cabo dicho cambio. Esta asignación y el formulario de cambio correspondientes, llegarán al SCMer.
 El formulario de cambio debe incluir:
 
 - Cambio a realizar.
@@ -203,11 +203,11 @@ La dirección de la herramienta se encuentra en la sección 1.4.
 
 ### Requerimientos Funcionales
 
-- Se reproducira solo una pista de audio que no sera posible alterar.
+- Se reproducirá solo una pista de audio que no será posible alterar.
 - El ritmo (BPM) puede ser aumentado y disminuido  en valores que van de 0 a 1000.
-- Se debe poder detener la reproduccion de audio y reanudar tantas veces como se desee.
-- El usuario debe poder observar las pulsasiones a travez de una repesentacion grafica.
-- Se debe informar el ritmo al cual se esta reproduciendo la musica.
+- Se debe poder detener la reproducción de audio y reanudar tantas veces como se desee.
+- El usuario debe poder observar las pulsaciones a través de una representación gráfica.
+- Se debe informar el ritmo al cual se está reproduciendo la música.
 
 ### Requerimientos No Funcionales
 
@@ -231,7 +231,13 @@ La dirección de la herramienta se encuentra en la sección 1.4.
 ### Matriz de Trazabilidad
 
 ## 4- ARQUITECTURA
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594464type-hierarchy.png)
 ## 5- DISEÑO E IMPLEMENTACIÓN
+### Diagramas de Clase
+### Diagramas de Objeto
+### Diagramas de Paquetes
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594456package-structure.png)
+
 ## 6- PRUEBAS UNITARIAS Y DEL SISTEMA
 ## 7- DATOS HISTÓRICOS
 ## 8- INFORMACIÓN ADICIONAL 
