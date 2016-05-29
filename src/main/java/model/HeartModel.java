@@ -10,10 +10,33 @@ public class HeartModel implements HeartModelInterface, Runnable {
 	Random random = new Random(System.currentTimeMillis());
 	Thread thread;
 
-	public HeartModel() {
+	// public HeartModel() {
+	// thread = new Thread(this);
+	// thread.start();
+	// }
+
+	//
+	private static HeartModel instance = null;
+	private static int attemps = 0;
+
+	protected HeartModel() {
 		thread = new Thread(this);
 		thread.start();
 	}
+
+	public static HeartModel getInstance() {
+		if (instance == null) {
+			instance = new HeartModel();
+			attemps = 1;
+		}
+		attemps++;
+		return instance;
+	}
+	
+	public int getAttemps(){
+		return attemps;
+	}
+	//
 
 	public void run() {
 		int lastrate = -1;
