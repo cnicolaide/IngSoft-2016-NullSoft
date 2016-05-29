@@ -4,22 +4,22 @@
 
 ## 1- NOTA DE ENTREGA
 
-### a. Breve listado de la funcionalidad incluida (con el estado de implementaciÛn de c/u)
+### a. Breve listado de la funcionalidad incluida (con el estado de implementaci√≥n de c/u)
 ### b. Pass/Fail Ratio de sistema
 ### c. Bugs conocidos (i.e. no resueltos) en la entrega
-### d. Lugar/link del entregable y de las instrucciones de instalaciÛn
+### d. Lugar/link del entregable y de las instrucciones de instalaci√≥n
 
 ## 2- MANEJO DE LAS CONFIGURACIONES
 
-### PropÛsito y alcance
+### Prop√≥sito y alcance
 
-SCM es el proceso mediante el cual se identifican los mÈtodos y herramientas para controlar el software a lo largo de su desarrollo y utilizaciÛn.
+SCM es el proceso mediante el cual se identifican los m√©todos y herramientas para controlar el software a lo largo de su desarrollo y utilizaci√≥n.
 En esta seccion se describe la forma de trabajo, los documentos, el hardware, software y las herramientas utilizadas en este proyecto.
 
-### PropÛsito del Manejo de la ConfiguraciÛn del Software (SCM)
+### Prop√≥sito del Manejo de la Configuraci√≥n del Software (SCM)
 
-- Asegurar la consistencia de la informaciÛn poniendo en pr·ctica la SCM.
-- Definir las personas que le dan soporte a las pr·cticas de SCM.
+- Asegurar la consistencia de la informaci√≥n poniendo en pr√°ctica la SCM.
+- Definir las personas que le dan soporte a las pr√°cticas de SCM.
 - Mantener la integridad a los largo de todo el ciclo de vida del producto.
 - Informar a grupos y las personas el estado del proyecto.
 - Crear un historial del estado anterior y actual del proyecto.
@@ -27,160 +27,160 @@ En esta seccion se describe la forma de trabajo, los documentos, el hardware, so
 
 ### Referencias, Abreviaturas y Glosario
 
-- **SCM** GestiÛn de la ConfiguraciÛn del Software (Software Configuration Management)
+- **SCM** Gesti√≥n de la Configuraci√≥n del Software (Software Configuration Management)
 - **SVN** Sistema de control de versiones
-- **CCC** ComitÈ de Control de Cambios
+- **CCC** Comit√© de Control de Cambios
 - **SCI** Software Configuration item
-- **SCMer** Rol encargado de realizar la tarea de gestiÛn de la configuraciÛn (SCM).
+- **SCMer** Rol encargado de realizar la tarea de gesti√≥n de la configuraci√≥n (SCM).
 
-### Herramientas de GestiÛn de ConfiguraciÛn
+### Herramientas de Gesti√≥n de Configuraci√≥n
 
-- **Lenguaje de ProgramaciÛn:** Java [https://www.java.com](https://www.java.com)
+- **Lenguaje de Programaci√≥n:** Java [https://www.java.com](https://www.java.com)
 - **Entorno de Desarrollo:** Netbeans IDE [https://netbeans.org/](https://netbeans.org/) 
-- **Software de Manejo de Versiones:** Git [https://git≠scm.com/](https://git≠scm.com/)
+- **Software de Manejo de Versiones:** Git [https://git¬≠scm.com/](https://git¬≠scm.com/)
 - **Sistema de Control de Versiones:** GitHub [https://github.com/cnicolaide/IngSoft-2016-NullSoft](https://github.com/cnicolaide/IngSoft-2016-NullSoft)
 - **Sistema de Seguimiento de Errores:** Git Issues [https://github.com/cnicolaide/IngSoft-2016-NullSoft/issues](https://github.com/cnicolaide/IngSoft-2016-NullSoft/issues)
-- **Herramienta de IntegraciÛn Continua:** Travis [https://travis-ci.org/cnicolaide/IngSoft-2016-NullSoft](https://travis-ci.org/cnicolaide/IngSoft-2016-NullSoft)
-- **Herramienta de AutomatizaciÛn:** Gradle [http://gradle.org/](http://gradle.org/)
+- **Herramienta de Integraci√≥n Continua:** Travis [https://travis-ci.org/cnicolaide/IngSoft-2016-NullSoft](https://travis-ci.org/cnicolaide/IngSoft-2016-NullSoft)
+- **Herramienta de Automatizaci√≥n:** Gradle [http://gradle.org/](http://gradle.org/)
 
-### Conceptos b·sicos
+### Conceptos b√°sicos
 
-**Repositorio:** Espacio fÌsico (directorio y grupo de directorios), donde se almacenan, una vez terminados, todos los elementos generados durante el proceso de desarrollo en sus diferentes versiones. Estos elementos pueden estar en tres estados: Pendientes de aprobar por el ·rea de SQA, Aprobados por SQA, y en ProducciÛn.
+**Repositorio:** Espacio f√≠sico (directorio y grupo de directorios), donde se almacenan, una vez terminados, todos los elementos generados durante el proceso de desarrollo en sus diferentes versiones. Estos elementos pueden estar en tres estados: Pendientes de aprobar por el √°rea de SQA, Aprobados por SQA, y en Producci√≥n.
 
-**SCI:** Software Configuration Item, Elemento de ConfiguraciÛn del Software. Son los elementos creados durante el proceso. Pueden ser de tres tipos:
-De Software: cÛdigo fuente, recursos gr·ficos, bibliotecas, ejecutables
-Documentos:tÈcnicos, administrativos y de usuario
-Estructuras de datos: estructura de base de datos, datos iniciales, archivos de configuraciÛn, etc.
+**SCI:** Software Configuration Item, Elemento de Configuraci√≥n del Software. Son los elementos creados durante el proceso. Pueden ser de tres tipos:
+De Software: c√≥digo fuente, recursos gr√°ficos, bibliotecas, ejecutables
+Documentos:t√©cnicos, administrativos y de usuario
+Estructuras de datos: estructura de base de datos, datos iniciales, archivos de configuraci√≥n, etc.
 
-**Check Out:** Tomar un SCI del repositorio y copiarlo en un ·rea de trabajo, dejando bloqueado el SCI en el repositorio, para que nadie m·s pueda hacer un check out del mismo.
+**Check Out:** Tomar un SCI del repositorio y copiarlo en un √°rea de trabajo, dejando bloqueado el SCI en el repositorio, para que nadie m√°s pueda hacer un check out del mismo.
 
-**Check In:** Si se trata de un SCI nuevo, ingresarlo en el repositorio y dejarlo disponible para posteriores modificaciones, mediante el mecanismo de check out y check in. Si se trata de un SCI existente al que se le hizo check out, el check in implica el ingreso al repositorio de una nueva versiÛn del SCI, dejando al SCI disponible, liberando el bloqueo que registrado en el momento del check out.
+**Check In:** Si se trata de un SCI nuevo, ingresarlo en el repositorio y dejarlo disponible para posteriores modificaciones, mediante el mecanismo de check out y check in. Si se trata de un SCI existente al que se le hizo check out, el check in implica el ingreso al repositorio de una nueva versi√≥n del SCI, dejando al SCI disponible, liberando el bloqueo que registrado en el momento del check out.
 
-### AdministraciÛn de la ConfiguraciÛn del Proyecto
+### Administraci√≥n de la Configuraci√≥n del Proyecto
 
-La AdministraciÛn de la configuraciÛn del proyecto est· a cargo del "Global PCMî, Èl es el responsable de actividades como seguimiento de las herramientas, creaciÛn de los nuevos branches, creaciÛn del relÈase, etc.
+La Administraci√≥n de la configuraci√≥n del proyecto est√° a cargo del "Global PCM‚Äù, √©l es el responsable de actividades como seguimiento de las herramientas, creaci√≥n de los nuevos branches, creaci√≥n del rel√©ase, etc.
 
 **GPCM**
 Posee toda responsabilidad sobre todos los CI.
-Responsabilidad en la creaciÛn de branches y administraciÛn de sus polÌticas.
+Responsabilidad en la creaci√≥n de branches y administraci√≥n de sus pol√≠ticas.
 Responsabilidad y asistencia sobre el etiquetado y lanzamiento de branches.
 Coordinar actividades del CM en el proyecto.
-Asegurar la correcta ejecuciÛn del esquema del CM.
-ParticipaciÛn en auditorias.
+Asegurar la correcta ejecuci√≥n del esquema del CM.
+Participaci√≥n en auditorias.
 Analizar todas las novedades relacionadas al CM.
 
 **TPCM**
-Asistencia en la creaciÛn de tags y branches.
-CreaciÛn de actividades para el equipo especÌfico en branches.
-Garantizar la integridad del producto y el seguimiento de los elementos de configuraciÛn propios del equipo.
-ParticipaciÛn en auditorias.
+Asistencia en la creaci√≥n de tags y branches.
+Creaci√≥n de actividades para el equipo espec√≠fico en branches.
+Garantizar la integridad del producto y el seguimiento de los elementos de configuraci√≥n propios del equipo.
+Participaci√≥n en auditorias.
 Analizar todas las novedades relacionadas al CM.
 
 **Team**
 Ayudar a resolver conflictos durante la actividad de merge.
 Asegurarse que los criterios de calidad de los
 entregables a la rama principal se cumplan.
-Seguir todos los procesos asociados, polÌticas y pr·cticas definidas por sus roles asignados.
+Seguir todos los procesos asociados, pol√≠ticas y pr√°cticas definidas por sus roles asignados.
 
-### a. DirecciÛn y forma de accesos a la herramienta de control de versiones
-### b. Esquema de directorios y propÛsito de cada uno.
+### a. Direcci√≥n y forma de accesos a la herramienta de control de versiones
+### b. Esquema de directorios y prop√≥sito de cada uno.
 ### c. Normas de etiquetado y de nombramiento de los archivos.
 
-Para nombramiento de etiquetas se seguir· una notaciÛn numÈrica compuesta por tres n˙meros (y un cuarto opcional) separados por puntos con la siguiente notaciÛn:
+Para nombramiento de etiquetas se seguir√° una notaci√≥n num√©rica compuesta por tres n√∫meros (y un cuarto opcional) separados por puntos con la siguiente notaci√≥n:
 
 **major.minor.revision[.entrega]**
 
-Cada uno de estos n˙meros tienen el siguiente significado:
+Cada uno de estos n√∫meros tienen el siguiente significado:
 
-- **major**: indica la versiÛn principal del software, consistiendo en un conjunto de funcionalidades concretas que son recogidas y cubiertas en dicha versiÛn.
-- **minor**: indican funcionalidad menor cubierta en la versiÛn de software entregada.
-- **revision**: se modifican cuando hay revisiones de cÛdigo ante fallos de la aplicaciÛn.
-- **entrega**: este dÌgito tiene el objetivo de llevar la cuenta del n˙mero de veces que una entrega se rechaza, por incumplimiento de alg˙n requisitos de la gestiÛn de entregas o del proyecto.
+- **major**: indica la versi√≥n principal del software, consistiendo en un conjunto de funcionalidades concretas que son recogidas y cubiertas en dicha versi√≥n.
+- **minor**: indican funcionalidad menor cubierta en la versi√≥n de software entregada.
+- **revision**: se modifican cuando hay revisiones de c√≥digo ante fallos de la aplicaci√≥n.
+- **entrega**: este d√≠gito tiene el objetivo de llevar la cuenta del n√∫mero de veces que una entrega se rechaza, por incumplimiento de alg√∫n requisitos de la gesti√≥n de entregas o del proyecto.
 
-En el caso de la creaciÛn de un branch o linea de desarrollo distinta de la principal aÒadiremos la letra b al final de la numeraciÛn. 
+En el caso de la creaci√≥n de un branch o linea de desarrollo distinta de la principal a√±adiremos la letra b al final de la numeraci√≥n. 
 
 ### d. Plan del esquema de ramas a usar (y en uso).
 
-Entendiendo que un branch es una linea de desarrollo distinta de la principal. Generalmente se trabajara sobre el trunk del proyecto, pero en ciertas ocasiones podr· ser necesario crear una linea de desarrollo paralela, para esto se utilizaran los branch.
+Entendiendo que un branch es una linea de desarrollo distinta de la principal. Generalmente se trabajara sobre el trunk del proyecto, pero en ciertas ocasiones podr√° ser necesario crear una linea de desarrollo paralela, para esto se utilizaran los branch.
 
-Imaginando que tenemos nuestro proyecto con una linea de desarrollo principal (sobre el trunk), y que en ciertos momentos algunas de las versiones (tags) que se marcaron pasaron al entorno de producciÛn. Pero en un determinado momento se detecta un error critico o una tarea (por ejemplo cambiar la integraciÛn con otra aplicaciÛn) y hay que abordarla de forma r·pida sobre la versiÛn que hay en producciÛn y si pasar toda la nueva funcionalidad de las versiones que la siguieron y que no han pasado por un proceso de pruebas.
+Imaginando que tenemos nuestro proyecto con una linea de desarrollo principal (sobre el trunk), y que en ciertos momentos algunas de las versiones (tags) que se marcaron pasaron al entorno de producci√≥n. Pero en un determinado momento se detecta un error critico o una tarea (por ejemplo cambiar la integraci√≥n con otra aplicaci√≥n) y hay que abordarla de forma r√°pida sobre la versi√≥n que hay en producci√≥n y si pasar toda la nueva funcionalidad de las versiones que la siguieron y que no han pasado por un proceso de pruebas.
 
-En este caso el equipo debe de crear un branch sobre el tag que marca la versiÛn que hay en producciÛn y sobre la que se quiere implementar alguna tarea concreta. Por ejemplo en el siguiente diagrama podemos ver que sobre la versiÛn 1.0.1 se crea un branch 1.0.1b.
+En este caso el equipo debe de crear un branch sobre el tag que marca la versi√≥n que hay en producci√≥n y sobre la que se quiere implementar alguna tarea concreta. Por ejemplo en el siguiente diagrama podemos ver que sobre la versi√≥n 1.0.1 se crea un branch 1.0.1b.
 
 ![](http://www.juntadeandalucia.es/servicios/madeja/sites/default/files/imagecache/wysiwyg_imageupload_big/wysiwyg_imageupload/10/branchs.jpg)
 
-Una vez finalizada la tarea tendremos una versiÛn que podremos desplegar (pasando por el procedimiento de entrega y pruebas previamente) en producciÛn.
-Para evitar que se repitan tareas en las distintas lineas, cada branch debe representar el desarrollo una tarea concreta para que se vuelva a integrar en la linea principal de desarrollo en poco tiempo, de esta manera la tarea de integraciÛn sera menos costosa.
+Una vez finalizada la tarea tendremos una versi√≥n que podremos desplegar (pasando por el procedimiento de entrega y pruebas previamente) en producci√≥n.
+Para evitar que se repitan tareas en las distintas lineas, cada branch debe representar el desarrollo una tarea concreta para que se vuelva a integrar en la linea principal de desarrollo en poco tiempo, de esta manera la tarea de integraci√≥n sera menos costosa.
 
-### e. PolÌticas de fusiÛn de archivos y de etiquetado de acuerdo al progreso de calidad en los entregables.
+### e. Pol√≠ticas de fusi√≥n de archivos y de etiquetado de acuerdo al progreso de calidad en los entregables.
 
-Para fusionar nuevas ramas que pudieran surgir con el cÛdigo principal nuevamente, el administrador realizara la fusiÛn haciendo un rebase del cÛdigo junto a los desarrolladores. De esta forma r·pidamente se podran identificar errores, los desarrolladores podran trabajar en resolverlos y el administrador est·ra al tanto de la situaciÛn para coordinar otro eventual cambio en el cÛdigo.
+Para fusionar nuevas ramas que pudieran surgir con el c√≥digo principal nuevamente, el administrador realizara la fusi√≥n haciendo un rebase del c√≥digo junto a los desarrolladores. De esta forma r√°pidamente se podran identificar errores, los desarrolladores podran trabajar en resolverlos y el administrador est√°ra al tanto de la situaci√≥n para coordinar otro eventual cambio en el c√≥digo.
 
-Los criterios para modificar (incrementar) cada uno de los contadores de la etiqueta de versiÛn son los siguientes:
+Los criterios para modificar (incrementar) cada uno de los contadores de la etiqueta de versi√≥n son los siguientes:
 
-- **major**: nuevas funcionalidades claves de la aplicaciÛn respecto a la versiÛn anterior debido a la inclusiÛn de nuevos requerimientos para el sistema, como la inclusiÛn de nuevos mÛdulos o una revisiÛn completa de los existentes.
-- **minor**: cambios significativos en la forma en la que se ofrece la funcionalidad existente, correcciÛn de grandes fallos del sistema o nuevas versiones evolutivas que modifican significativamente la funcionalidad ofrecida.
+- **major**: nuevas funcionalidades claves de la aplicaci√≥n respecto a la versi√≥n anterior debido a la inclusi√≥n de nuevos requerimientos para el sistema, como la inclusi√≥n de nuevos m√≥dulos o una revisi√≥n completa de los existentes.
+- **minor**: cambios significativos en la forma en la que se ofrece la funcionalidad existente, correcci√≥n de grandes fallos del sistema o nuevas versiones evolutivas que modifican significativamente la funcionalidad ofrecida.
 - **revision**: se modifica por cada entrega de software que se realice.
-- **entrega**: al rechazarse una entrega se incrementa este contador en la siguiente. Cuando la entrega se aceptase se crearÌa un tag p˙blico que solo conservarÌa los tres primeros dÌgitos (mayor, minor, revision).
+- **entrega**: al rechazarse una entrega se incrementa este contador en la siguiente. Cuando la entrega se aceptase se crear√≠a un tag p√∫blico que solo conservar√≠a los tres primeros d√≠gitos (mayor, minor, revision).
 
-De esta forma se puede visualizar el ·rbol de entregables con la siguiente estructura
+De esta forma se puede visualizar el √°rbol de entregables con la siguiente estructura
 
 ![](http://www.juntadeandalucia.es/servicios/madeja/sites/default/files/imagecache/wysiwyg_imageupload_big/wysiwyg_imageupload/10/versiones.jpg)
 
-### f. Forma de entrega de los ìreleasesî, instrucciones mÌnimas de instalaciÛn y formato de entrega.
+### f. Forma de entrega de los ‚Äúreleases‚Äù, instrucciones m√≠nimas de instalaci√≥n y formato de entrega.
 
-Una vez terminado el cÛdigo, corregidos todos los errores del mismo, el cÛdigo es compilado y el compilador genera un archivo de extensiÛn .jar, este archivo puede ser ejecutado ubic·ndolo en cualquier carpeta de la computadora del usuario, con la aclaraciÛn que debe estar instalado en el equipo cliente el sistema Java runtime enviroment (JRE).
+Una vez terminado el c√≥digo, corregidos todos los errores del mismo, el c√≥digo es compilado y el compilador genera un archivo de extensi√≥n .jar, este archivo puede ser ejecutado ubic√°ndolo en cualquier carpeta de la computadora del usuario, con la aclaraci√≥n que debe estar instalado en el equipo cliente el sistema Java runtime enviroment (JRE).
 El software puede ser distribuido por medio de discos USB.
 
-### g. Listado y forma de contacto de los integrantes del equipo, asÌ como sus roles en la CCB. TambiÈn incluir periodicidad de las reuniones y miembros obligatorios.
+### g. Listado y forma de contacto de los integrantes del equipo, as√≠ como sus roles en la CCB. Tambi√©n incluir periodicidad de las reuniones y miembros obligatorios.
 
-El CCC es un comitÈ que asegura que cada cambio est· apropiadamente considerado por todas las partes y es autorizado antes de su implementaciÛn.
-El CCC es responsable de aprobar, monitorear y controlar cada solicitud de cambios para establecer una lÌnea de trabajo.
-El alcance del trabajo ser· aprobar o rechazar los cambios necesarios en planes, documentos y cÛdigos. Las decisiones deber·n ser tomadas respecto a las acciones que deber·n estar basadas en la calidad del producto, asegurando el correcto estado del producto despuÈs de cada ciclo de prueba.
-El CCC puede estar conformado por una o varias personas, pero es importante que estas tengan una visiÛn global del proyecto.
-La decisiÛn del CCC y sus apreciaciones se registran en los apartados correspondientes del formulario del cambio.
-Si el CCC aprueba el cambio, se genera la asignaciÛn de la tarea de llevar a cabo dicho cambio. Esta asignaciÛn y el formulario de cambio correspondientes, llegar·n al SCMer .
+El CCC es un comit√© que asegura que cada cambio est√° apropiadamente considerado por todas las partes y es autorizado antes de su implementaci√≥n.
+El CCC es responsable de aprobar, monitorear y controlar cada solicitud de cambios para establecer una l√≠nea de trabajo.
+El alcance del trabajo ser√° aprobar o rechazar los cambios necesarios en planes, documentos y c√≥digos. Las decisiones deber√°n ser tomadas respecto a las acciones que deber√°n estar basadas en la calidad del producto, asegurando el correcto estado del producto despu√©s de cada ciclo de prueba.
+El CCC puede estar conformado por una o varias personas, pero es importante que estas tengan una visi√≥n global del proyecto.
+La decisi√≥n del CCC y sus apreciaciones se registran en los apartados correspondientes del formulario del cambio.
+Si el CCC aprueba el cambio, se genera la asignaci√≥n de la tarea de llevar a cabo dicho cambio. Esta asignaci√≥n y el formulario de cambio correspondientes, llegar√°n al SCMer .
 El formulario de cambio debe incluir:
 
 - Cambio a realizar.
 - Productos a modificar.
 - Restricciones.
-- Criterios de revisiÛn y auditorÌa.
-- Tiempo estimado para realizar el cambio y dedicaciÛn real.
+- Criterios de revisi√≥n y auditor√≠a.
+- Tiempo estimado para realizar el cambio y dedicaci√≥n real.
 - Costo estimado y real.
 - Persona responsable del cambio.
 - Pruebas y reportes de pruebas.
 
-Este ˙ltimo punto es importante, ya que si surge un cambio se deber·n realizar nuevamente las mismas
-pruebas de manera de verificar que no se alterÛ la funcionalidad existente.
+Este √∫ltimo punto es importante, ya que si surge un cambio se deber√°n realizar nuevamente las mismas
+pruebas de manera de verificar que no se alter√≥ la funcionalidad existente.
 
 #### Integrantes del Equipo, Roles y reuniones
 
-- Los roles de los distintos miembros estar·n dados por los siguientes cargos:
+- Los roles de los distintos miembros estar√°n dados por los siguientes cargos:
 - Engineering Manager
 - Release Manager Coordinador de errores
 - Uber Scrum Team
-- Director de IngenierÌa
+- Director de Ingenier√≠a
 - GPCM
 
-Al ser 3 integrantes en el grupo, realizamos diversas tareas que engloban la mayorÌa de las responsabilidades de los roles nombrados anteriormente.
+Al ser 3 integrantes en el grupo, realizamos diversas tareas que engloban la mayor√≠a de las responsabilidades de los roles nombrados anteriormente.
 
-Nuestra forma de trabajo con respecto al proyecto, fue con 2 reuniones reales donde nos organizamos y definimos la forma de trabajo a seguir, nos pusimos de acuerdo en las herramientas a utilizar y nivelamos los conocimientos en la utilizaciÛn de las herramientas.
+Nuestra forma de trabajo con respecto al proyecto, fue con 2 reuniones reales donde nos organizamos y definimos la forma de trabajo a seguir, nos pusimos de acuerdo en las herramientas a utilizar y nivelamos los conocimientos en la utilizaci√≥n de las herramientas.
 
 Siempre y en todo momento trabajamos todos los integrantes del grupo.
 
 Fecha Horas
-Tipo de ReuniÛn Actividad
+Tipo de Reuni√≥n Actividad
 23/03/16 1,5
-h Real PlanificaciÛn y organizaciÛn
+h Real Planificaci√≥n y organizaci√≥n
 28/03/16 2
 h Real
-NivelaciÛn de conocimiento sobre uso de
+Nivelaci√≥n de conocimiento sobre uso de
 herramientas.
-31/03/16 2 h Virtual CreaciÛn de espacios virtuales
-Tipo de ReuniÛn
+31/03/16 2 h Virtual Creaci√≥n de espacios virtuales
+Tipo de Reuni√≥n
 Las reuniones reales las realizamos en los box de la Facultad, y para las reuniones virtuales y forma de
-contacto, utilizamos las siguientes Herramientas, con las que nos mantenÌamos al tanto.
+contacto, utilizamos las siguientes Herramientas, con las que nos manten√≠amos al tanto.
 Grupo de WhatsApp.
 Grupo de Facebook del trabajo.
 
@@ -188,46 +188,50 @@ Grupo de Facebook del trabajo.
 
 Utilizamos la herramienta Issues proporcionada por GitHub para hacer seguimiento de los errores. Una vez creado el repositorio se tiene acceso a ella.
 
-La direcciÛn de la herramienta se encuentra en la secciÛn 1.4.
+La direcci√≥n de la herramienta se encuentra en la secci√≥n 1.4.
 
-### i. Cualquier otra informaciÛn relevante (ej. Direcciones del servidor de integraciÛn continua, etc.)
+### i. Cualquier otra informaci√≥n relevante (ej. Direcciones del servidor de integraci√≥n continua, etc.)
 
 ## 3- REQUERIMIENTOS
 
 ### Diagramas de Casos de Usos
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594441usecasediagram1.png)
 ### Diagramas de Actividades
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594439activitydiagram1.png)
 ### Diagramas de Secuencias
+
 
 ### Requerimientos Funcionales
 
-- Se reproducira solo un archivo de audio que no sera posible alterar.
+- Se reproducira solo una pista de audio que no sera posible alterar.
 - El ritmo (BPM) puede ser aumentado y disminuido  en valores que van de 0 a 1000.
-- Se debe poder detener la reproduccion de audio.
+- Se debe poder detener la reproduccion de audio y reanudar tantas veces como se desee.
 - El usuario debe poder observar las pulsasiones a travez de una repesentacion grafica.
+- Se debe informar el ritmo al cual se esta reproduciendo la musica.
 
 ### Requerimientos No Funcionales
-##  ##
+
 **Eficiencia**
 
-- Toda funcionalidad del sistema y transacciÛn de negocio debe responder al usuario en menos de 2 segundos.
+- Toda funcionalidad del sistema y transacci√≥n de negocio debe responder al usuario en menos de 2 segundos.
 
 **Usabilidad**
 
 - El sistema debe proporcionar mensajes de error que sean informativos y orientados a usuario final.
-- El tiempo de aprendizaje del sistema por un usuario deber· ser menor a 5 minutos.
-- El sistema debe poseer interfaces gr·ficas bien formadas.
+- El tiempo de aprendizaje del sistema por un usuario deber√° ser menor a 5 minutos.
+- El sistema debe poseer interfaces gr√°ficas bien formadas.
 
 **Dependabilidad**
 
-- El tiempo para iniciar o reiniciar el sistema no podr· ser mayor a 15 segundos.
-- La probabilidad de falla del Sistema no podr· ser mayor a 1%.
+- El tiempo para iniciar o reiniciar el sistema no podr√° ser mayor a 15 segundos.
+- La probabilidad de falla del Sistema no podr√° ser mayor a 1%.
 
 ### Diagrama de Arquitectura Preliminar
 
 ### Matriz de Trazabilidad
 
 ## 4- ARQUITECTURA
-## 5- DISE—O E IMPLEMENTACI”N
+## 5- DISE√ëO E IMPLEMENTACI√ìN
 ## 6- PRUEBAS UNITARIAS Y DEL SISTEMA
-## 7- DATOS HIST”RICOS
-## 8- INFORMACI”N ADICIONAL 
+## 7- DATOS HIST√ìRICOS
+## 8- INFORMACI√ìN ADICIONAL 
