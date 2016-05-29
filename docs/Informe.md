@@ -231,7 +231,13 @@ La dirección de la herramienta se encuentra en la sección 1.4.
 ### Matriz de Trazabilidad
 
 ## 4- ARQUITECTURA
+
+Se aplica el patrón de arquitectura MVC permitiendo independizar la lógica y la parte visual del sistema usando para eso un controlador que administra los procesos sirviendo como puente entre estos.
+
+**La agrupación de clases de nuestro sistema es:**
+
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594464type-hierarchy.png)
+
 ## 5- DISEÑO E IMPLEMENTACIÓN
 ### Diagramas de Clase
 ### Diagramas de Objeto
