@@ -10,4 +10,6 @@ public interface HeartModelInterface {
 	void registerObserver(BPMObserver o);
 
 	void removeObserver(BPMObserver o);
+
+	int getAttemps();
 }
