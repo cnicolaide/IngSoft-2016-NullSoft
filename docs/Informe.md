@@ -4,10 +4,10 @@
 
 ## 1- NOTA DE ENTREGA
 
-### a. Breve listado de la funcionalidad incluida (con el estado de implementación de c/u)
-### b. Pass/Fail Ratio de sistema
-### c. Bugs conocidos (i.e. no resueltos) en la entrega
-### d. Lugar/link del entregable y de las instrucciones de instalación
+### Listado de la funcionalidad incluida (con el estado de implementación de c/u).
+### Pass/Fail Ratio de sistema.
+### Bugs conocidos (i.e. no resueltos) en la entrega.
+### Lugar/link del entregable y de las instrucciones de instalación.
 
 ## 2- MANEJO DE LAS CONFIGURACIONES
 
@@ -155,7 +155,7 @@ La decisión del CCC y sus apreciaciones se registran en los apartados correspon
 
 Si el CCC aprueba el cambio, se genera la asignación de la tarea de llevar a cabo dicho cambio. Esta asignación y el formulario de cambio correspondientes, llegarán al SCMer.
 
-El formulario de cambio debe incluir:
+**El formulario de cambio debe incluir:**
 
 - Cambio a realizar.
 - Productos a modificar.
@@ -168,34 +168,26 @@ El formulario de cambio debe incluir:
 
 Este último punto es importante, ya que si surge un cambio se deberán realizar nuevamente las mismas pruebas de manera de verificar que no se alteró la funcionalidad existente.
 
-Los roles de los distintos miembros estarán dados por los siguientes cargos:
+**Los roles de los distintos miembros estarán dados por los siguientes cargos:**
 
-- **Engineering Manager**
-- **Release Manager Coordinador de errores**
-- **Uber Scrum Team**
-- **Director de Ingeniería**
-- **GPCM**
+- Engineering Manager
+- Release Manager 
+- Uber Scrum Team
+- GPCM
 
-Al ser 3 integrantes en el grupo, realizamos diversas tareas que engloban la mayoría de las responsabilidades de los roles nombrados anteriormente.
+Al ser 3 integrantes en el grupo, todos realizamos diversas tareas que engloban la mayoría de las responsabilidades de los roles nombrados anteriormente. 
 
-Nuestra forma de trabajo con respecto al proyecto, fue con 2 reuniones reales donde nos organizamos y definimos la forma de trabajo a seguir, nos pusimos de acuerdo en las herramientas a utilizar y nivelamos los conocimientos en la utilización de las herramientas.
+**Los datos de contacto de los miembros y los roles teóricos asignados son los siguientes:**
 
-Siempre y en todo momento trabajamos todos los integrantes del grupo.
+| Miembro             	| Email                    	| Rol Teorico        	|
+|---------------------	|--------------------------	|--------------------	|
+| Christian Nicolaide 	| cnicolaide@gmail.com     	| Eng. Manager, GPCM 	|
+| Enzo Candotti       	| enzocandotti93@gmail.com 	| Rel. Manager       	|
+| Mauricio Flores     	| elmauri229@gmail.com     	| Uber Scrum Team    	|
 
-Fecha Horas
-Tipo de Reunión Actividad
-23/03/16 1,5
-h Real Planificación y organización
-28/03/16 2
-h Real
-Nivelación de conocimiento sobre uso de
-herramientas.
-31/03/16 2 h Virtual Creación de espacios virtuales
-Tipo de Reunión
-Las reuniones reales las realizamos en los box de la Facultad, y para las reuniones virtuales y forma de
-contacto, utilizamos las siguientes Herramientas, con las que nos manteníamos al tanto.
-Grupo de WhatsApp.
-Grupo de Facebook del trabajo.
+Nuestra forma de trabajo consiste en 2 reuniones semanales en día y horario a convenir según disponibilidad.
+
+Las reuniones reales las realizamos en los box de la Facultad, y para las reuniones virtuales utilizamos Skype, Facebook y WhatsApp.
 
 ### Herramienta de seguimiento de bugs usado para reportar los defectos descubiertos y su estado.
 
@@ -210,7 +202,6 @@ La dirección de la herramienta se encuentra definido en la sección superior.
 ### Diagramas de Actividades
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594439activitydiagram1.png)
 ### Diagramas de Secuencias
-
 
 ### Requerimientos Funcionales
 
