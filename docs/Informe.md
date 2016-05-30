@@ -72,7 +72,7 @@ Asegurarse que los criterios de calidad de los
 entregables a la rama principal se cumplan.
 Seguir todos los procesos asociados, políticas y prácticas definidas por sus roles asignados.
 
-### a. Dirección y forma de accesos a la herramienta de control de versiones
+### Dirección y forma de accesos a la herramienta de control de versiones
 
 - **Lenguaje de Programación:** Java [https://www.java.com](https://www.java.com)
 - **Entorno de Desarrollo:** Netbeans IDE [https://netbeans.org/](https://netbeans.org/) 
@@ -82,19 +82,19 @@ Seguir todos los procesos asociados, políticas y prácticas definidas por sus r
 - **Herramienta de Integración Continua:** Travis [https://travis-ci.org/cnicolaide/IngSoft-2016-NullSoft](https://travis-ci.org/cnicolaide/IngSoft-2016-NullSoft)
 - **Herramienta de Automatización:** Gradle [http://gradle.org/](http://gradle.org/)
 
-### b. Esquema de directorios y propósito de cada uno.
+### Esquema de directorios y propósito de cada uno.
 
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9594700directorios.jpg)
 
-|    Ruta    |                        Propósito                        |
-|:----------:|:-------------------------------------------------------:|
-| .\config\  | Contiene archivos de configuracion de plugins de Gradle |
-| .\docs\    | Contine documentacion y diagramas del proyecto.         |
-| .\gradle\  | Contiene el wrapper de Gradle.                          |
-| .\src\main | Contiene las clases principales del proyecto.           |
-| .\src\test | Contiene las clases de test usadas en el proyecto.      |
+| Ruta       	| Propósito                                               	|
+|------------	|---------------------------------------------------------	|
+| .\config\  	| Contiene archivos de configuración de plugins de Gradle 	|
+| .\docs\    	| Contiene documentación y diagramas del proyecto.         	|
+| .\gradle\  	| Contiene el wrapper de Gradle.                          	|
+| .\src\main 	| Contiene las clases principales del proyecto.           	|
+| .\src\test 	| Contiene las clases de test usadas en el proyecto.      	|
 
-### c. Normas de etiquetado y de nombramiento de los archivos.
+### Normas de etiquetado y de nombramiento de los archivos.
 
 Para nombramiento de etiquetas se seguirá una notación numérica compuesta por tres números (y un cuarto opcional) separados por puntos con la siguiente notación:
 
@@ -109,7 +109,7 @@ Cada uno de estos números tienen el siguiente significado:
 
 En el caso de la creación de un branch o línea de desarrollo distinta de la principal añadiremos la letra b al final de la numeración. 
 
-### d. Plan del esquema de ramas a usar (y en uso).
+### Plan del esquema de ramas a usar (y en uso).
 
 Entendiendo que un branch es una línea de desarrollo distinta de la principal. Generalmente se trabajara sobre el trunk del proyecto, pero en ciertas ocasiones podrá ser necesario crear una línea de desarrollo paralela, para esto se utilizaran los branch.
 
@@ -122,7 +122,7 @@ En este caso el equipo debe de crear un branch sobre el tag que marca la versió
 Una vez finalizada la tarea tendremos una versión que podremos desplegar (pasando por el procedimiento de entrega y pruebas previamente) en producción.
 Para evitar que se repitan tareas en las distintas líneas, cada branch debe representar el desarrollo una tarea concreta para que se vuelva a integrar en la línea principal de desarrollo en poco tiempo, de esta manera la tarea de integración será menos costosa.
 
-### e. Políticas de fusión de archivos y de etiquetado de acuerdo al progreso de calidad en los entregables.
+### Políticas de fusión de archivos y de etiquetado de acuerdo al progreso de calidad en los entregables.
 
 Para fusionar nuevas ramas que pudieran surgir con el código principal nuevamente, el administrador realizara la fusión haciendo un rebase del código junto a los desarrolladores. De esta forma rápidamente se podrán identificar errores, los desarrolladores podrán trabajar en resolverlos y el administrador estará al tanto de la situación para coordinar otro eventual cambio en el código.
 
@@ -137,19 +137,24 @@ De esta forma se puede visualizar el árbol de entregables con la siguiente estr
 
 ![](http://www.juntadeandalucia.es/servicios/madeja/sites/default/files/imagecache/wysiwyg_imageupload_big/wysiwyg_imageupload/10/versiones.jpg)
 
-### f. Forma de entrega de los “releases”, instrucciones mínimas de instalación y formato de entrega.
+### Forma de entrega de los “releases”, instrucciones mínimas de instalación y formato de entrega.
 
-Una vez terminado el código, corregidos todos los errores del mismo, el código es compilado y el compilador genera un archivo de extensión .jar, este archivo puede ser ejecutado ubicándolo en cualquier carpeta de la computadora del usuario, con la aclaración que debe estar instalado en el equipo cliente el sistema Java runtime enviroment (JRE).
-El software puede ser distribuido por medio de discos USB.
+Una vez finalizadas las pruebas y llegado a un nivel aceptable de fail/ratio, se procede a la compilación del release, el compilador genera un archivo de extensión .jar, este archivo puede ser ejecutado ubicándolo en cualquier carpeta de la computadora del usuario, con la aclaración que debe estar instalado en el equipo cliente el sistema Java runtime enviroment (JRE).
 
-### g. Listado y forma de contacto de los integrantes del equipo, así como sus roles en la CCB. También incluir periodicidad de las reuniones y miembros obligatorios.
+El software puede ser distribuido por medio de un sitio web, CDs, o cualquier otro tipo de unidad de almacenamiento removible.
+
+### Listado y forma de contacto de los integrantes del equipo, así como sus roles en la CCB. También incluir periodicidad de las reuniones y miembros obligatorios.
 
 El CCC es un comité que asegura que cada cambio está apropiadamente considerado por todas las partes y es autorizado antes de su implementación.
+
 El CCC es responsable de aprobar, monitorear y controlar cada solicitud de cambios para establecer una línea de trabajo.
 El alcance del trabajo será aprobar o rechazar los cambios necesarios en planes, documentos y códigos. Las decisiones deberán ser tomadas respecto a las acciones que deberán estar basadas en la calidad del producto, asegurando el correcto estado del producto después de cada ciclo de prueba.
+
 El CCC puede estar conformado por una o varias personas, pero es importante que estas tengan una visión global del proyecto.
 La decisión del CCC y sus apreciaciones se registran en los apartados correspondientes del formulario del cambio.
+
 Si el CCC aprueba el cambio, se genera la asignación de la tarea de llevar a cabo dicho cambio. Esta asignación y el formulario de cambio correspondientes, llegarán al SCMer.
+
 El formulario de cambio debe incluir:
 
 - Cambio a realizar.
@@ -161,17 +166,15 @@ El formulario de cambio debe incluir:
 - Persona responsable del cambio.
 - Pruebas y reportes de pruebas.
 
-Este último punto es importante, ya que si surge un cambio se deberán realizar nuevamente las mismas
-pruebas de manera de verificar que no se alteró la funcionalidad existente.
+Este último punto es importante, ya que si surge un cambio se deberán realizar nuevamente las mismas pruebas de manera de verificar que no se alteró la funcionalidad existente.
 
-#### Integrantes del Equipo, Roles y reuniones
+Los roles de los distintos miembros estarán dados por los siguientes cargos:
 
-- Los roles de los distintos miembros estarán dados por los siguientes cargos:
-- Engineering Manager
-- Release Manager Coordinador de errores
-- Uber Scrum Team
-- Director de Ingeniería
-- GPCM
+- **Engineering Manager**
+- **Release Manager Coordinador de errores**
+- **Uber Scrum Team**
+- **Director de Ingeniería**
+- **GPCM**
 
 Al ser 3 integrantes en el grupo, realizamos diversas tareas que engloban la mayoría de las responsabilidades de los roles nombrados anteriormente.
 
@@ -194,11 +197,11 @@ contacto, utilizamos las siguientes Herramientas, con las que nos manteníamos a
 Grupo de WhatsApp.
 Grupo de Facebook del trabajo.
 
-### h. Herramienta de seguimiento de bugs usado para reportar los defectos descubiertos y su estado.
+### Herramienta de seguimiento de bugs usado para reportar los defectos descubiertos y su estado.
 
 Utilizamos la herramienta Issues proporcionada por GitHub para hacer seguimiento de los errores. Una vez creado el repositorio se tiene acceso a ella.
 
-La dirección de la herramienta se encuentra en la sección 1.4.
+La dirección de la herramienta se encuentra definido en la sección superior.
 
 ## 3- REQUERIMIENTOS
 
