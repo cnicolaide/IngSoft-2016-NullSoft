@@ -33,16 +33,6 @@ En esta sección se describe la forma de trabajo, los documentos, el hardware, s
 - **SCI** Software Configuration item
 - **SCMer** Rol encargado de realizar la tarea de gestión de la configuración (SCM).
 
-### Herramientas de Gestión de Configuración
-
-- **Lenguaje de Programación:** Java [https://www.java.com](https://www.java.com)
-- **Entorno de Desarrollo:** Netbeans IDE [https://netbeans.org/](https://netbeans.org/) 
-- **Software de Manejo de Versiones:** Git [https://git¬scm.com/](https://git¬scm.com/)
-- **Sistema de Control de Versiones:** GitHub [https://github.com/cnicolaide/IngSoft-2016-NullSoft](https://github.com/cnicolaide/IngSoft-2016-NullSoft)
-- **Sistema de Seguimiento de Errores:** Git Issues [https://github.com/cnicolaide/IngSoft-2016-NullSoft/issues](https://github.com/cnicolaide/IngSoft-2016-NullSoft/issues)
-- **Herramienta de Integración Continua:** Travis [https://travis-ci.org/cnicolaide/IngSoft-2016-NullSoft](https://travis-ci.org/cnicolaide/IngSoft-2016-NullSoft)
-- **Herramienta de Automatización:** Gradle [http://gradle.org/](http://gradle.org/)
-
 ### Conceptos básicos
 
 **Repositorio:** Espacio físico (directorio y grupo de directorios), donde se almacenan, una vez terminados, todos los elementos generados durante el proceso de desarrollo en sus diferentes versiones. Estos elementos pueden estar en tres estados: Pendientes de aprobar por el área de SQA, Aprobados por SQA, y en Producción.
@@ -83,16 +73,26 @@ entregables a la rama principal se cumplan.
 Seguir todos los procesos asociados, políticas y prácticas definidas por sus roles asignados.
 
 ### a. Dirección y forma de accesos a la herramienta de control de versiones
+
+- **Lenguaje de Programación:** Java [https://www.java.com](https://www.java.com)
+- **Entorno de Desarrollo:** Netbeans IDE [https://netbeans.org/](https://netbeans.org/) 
+- **Software de Manejo de Versiones:** Git [https://git-scm.com/](https://git-scm.com/)
+- **Sistema de Control de Versiones:** GitHub [https://github.com/cnicolaide/IngSoft-2016-NullSoft](https://github.com/cnicolaide/IngSoft-2016-NullSoft)
+- **Sistema de Seguimiento de Errores:** Git Issues [https://github.com/cnicolaide/IngSoft-2016-NullSoft/issues](https://github.com/cnicolaide/IngSoft-2016-NullSoft/issues)
+- **Herramienta de Integración Continua:** Travis [https://travis-ci.org/cnicolaide/IngSoft-2016-NullSoft](https://travis-ci.org/cnicolaide/IngSoft-2016-NullSoft)
+- **Herramienta de Automatización:** Gradle [http://gradle.org/](http://gradle.org/)
+
 ### b. Esquema de directorios y propósito de cada uno.
+
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9594700directorios.jpg)
 
-| Ruta       	|                                               Propòsito 	|
-|------------	|--------------------------------------------------------:	|
-| .\config\  	| Contiene archivos de configuracion de plugins de Gradle 	|
-| .\docs\    	| Contine documentacion y diagramas del proyecto.         	|
-| .\gradle\  	| Contiene el wrapper de Gradle.                          	|
-| .\src\main 	| Contiene las clases principales del proyecto.           	|
-| .\src\test 	| Contiene las clases de test usadas en el proyecto.      	|
+|    Ruta    |                        Propósito                        |
+|:----------:|:-------------------------------------------------------:|
+| .\config\  | Contiene archivos de configuracion de plugins de Gradle |
+| .\docs\    | Contine documentacion y diagramas del proyecto.         |
+| .\gradle\  | Contiene el wrapper de Gradle.                          |
+| .\src\main | Contiene las clases principales del proyecto.           |
+| .\src\test | Contiene las clases de test usadas en el proyecto.      |
 
 ### c. Normas de etiquetado y de nombramiento de los archivos.
 
@@ -200,8 +200,6 @@ Utilizamos la herramienta Issues proporcionada por GitHub para hacer seguimiento
 
 La dirección de la herramienta se encuentra en la sección 1.4.
 
-### i. Cualquier otra información relevante (ej. Direcciones del servidor de integración continua, etc.)
-
 ## 3- REQUERIMIENTOS
 
 ### Diagramas de Casos de Usos
@@ -221,18 +219,10 @@ La dirección de la herramienta se encuentra en la sección 1.4.
 
 ### Requerimientos No Funcionales
 
-**Eficiencia**
-
 - Toda funcionalidad del sistema y transacción de negocio debe responder al usuario en menos de 2 segundos.
-
-**Usabilidad**
-
 - El sistema debe proporcionar mensajes de error que sean informativos y orientados a usuario final.
 - El tiempo de aprendizaje del sistema por un usuario deberá ser menor a 5 minutos.
 - El sistema debe poseer interfaces gráficas bien formadas.
-
-**Dependabilidad**
-
 - El tiempo para iniciar o reiniciar el sistema no podrá ser mayor a 15 segundos.
 - La probabilidad de falla del Sistema no podrá ser mayor a 1%.
 
