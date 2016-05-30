@@ -246,4 +246,17 @@ Se aplica el patrón de arquitectura MVC permitiendo independizar la lógica y l
 
 ## 6- PRUEBAS UNITARIAS Y DEL SISTEMA
 ## 7- DATOS HISTÓRICOS
-## 8- INFORMACIÓN ADICIONAL 
+## 8- INFORMACIÓN ADICIONAL
+ 
+Durante la elaboración de este trabajo práctico aprendimos la importancia que tiene el proceso de planificación a la hora de desarrollar software de manera profesional.
+
+Nos pudimos ver inmersos en una situación de trabajo cooperativo, donde cada uno de nosotros debía asumir diferentes roles de ejecución y control de tareas.
+Recorrimos y utilizamos la mayoría de las herramientas que fueron presentadas a lo largo de la materia para el control de versiones, automatización, integración continua y gestión de defectos.
+
+Notamos la importancia del desarrollo de esquemas previos para la interpretación correcta del problema a resolver y como esto sirve de soporte después a la hora de escribir código.
+
+Pudimos identificar en nuestro trabajo comportamientos aplicables a algunos de los patrones de diseño y arquitectura estudiados a lo largo del curso, lo cual nos facilitó bastante el desarrollo.
+
+Utilizando metodologías de testing profesional, pudimos evaluar de cierta forma la calidad de nuestro desarrollo y tomamos conciencia de los diferentes niveles de control que se deben tener durante la etapa de desarrollo para poder concluir con un nivel aceptable de pruebas sobre el producto a entregar.
+
+En algunos momentos tuvimos problemas de interpretación de ciertas consignas lo que nos pudo llevar a cometer algunos errores de implementación, gracias al apoyo y el dialogo con los docentes de la materia esto fue superado y pudimos concluir de manera exitosa nuestro proyecto.
