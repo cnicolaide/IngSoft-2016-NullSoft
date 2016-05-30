@@ -84,6 +84,16 @@ Seguir todos los procesos asociados, políticas y prácticas definidas por sus r
 
 ### a. Dirección y forma de accesos a la herramienta de control de versiones
 ### b. Esquema de directorios y propósito de cada uno.
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9594700directorios.jpg)
+
+| Ruta       	|                                               Propòsito 	|
+|------------	|--------------------------------------------------------:	|
+| .\config\  	| Contiene archivos de configuracion de plugins de Gradle 	|
+| .\docs\    	| Contine documentacion y diagramas del proyecto.         	|
+| .\gradle\  	| Contiene el wrapper de Gradle.                          	|
+| .\src\main 	| Contiene las clases principales del proyecto.           	|
+| .\src\test 	| Contiene las clases de test usadas en el proyecto.      	|
+
 ### c. Normas de etiquetado y de nombramiento de los archivos.
 
 Para nombramiento de etiquetas se seguirá una notación numérica compuesta por tres números (y un cuarto opcional) separados por puntos con la siguiente notación:
