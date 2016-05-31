@@ -202,6 +202,8 @@ La dirección de la herramienta se encuentra definido en la sección superior.
 ### Diagramas de Actividades
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594439activitydiagram1.png)
 ### Diagramas de Secuencias
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9595640secuencia1.jpg)
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9595644secuencia2.jpg)
 
 ### Requerimientos Funcionales
 

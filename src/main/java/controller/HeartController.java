@@ -24,7 +24,7 @@ public class HeartController implements ControllerInterface {
 	}
 
 	public void increaseBPM() {
-		System.out.println("HOLAAA" + model.getAttemps());
+		System.out.println("HOLAAA" );
 	}
 
 	public void decreaseBPM() {

@@ -11,5 +11,4 @@ public interface HeartModelInterface {
 
 	void removeObserver(BPMObserver o);
 
-	int getAttemps();
 }
