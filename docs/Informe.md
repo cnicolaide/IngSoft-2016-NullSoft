@@ -234,6 +234,7 @@ Se aplica el patrón de arquitectura MVC permitiendo independizar la lógica y l
 
 ## 5- DISEÑO E IMPLEMENTACIÓN
 ### Diagramas de Clase
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9595319clases.png)
 ### Diagramas de Objeto
 ### Diagramas de Paquetes
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594456package-structure.png)
