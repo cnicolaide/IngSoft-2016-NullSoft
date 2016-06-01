@@ -12,11 +12,11 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 	Sequence sequence;
 	Track track;
 	String type = "Beat";
-	
+
 	public String getType() {
 		return type;
 	}
-	
+
 	public void initialize() {
 		setUpMidi();
 		buildTrackAndStart();

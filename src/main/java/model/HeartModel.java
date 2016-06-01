@@ -1,18 +1,17 @@
 package model;
 
 import java.util.*;
-import controller.BeatController;
 
-public class HeartModel  implements HeartModelInterface, Runnable {
+public class HeartModel implements HeartModelInterface, Runnable {
 	ArrayList beatObservers = new ArrayList();
 	ArrayList bpmObservers = new ArrayList();
 	int time = 1000;
 	int bpm = 90;
 	Random random = new Random(System.currentTimeMillis());
 	Thread thread;
-	
+
 	String type = "Heart";
-	
+
 	public String getType() {
 		return type;
 	}
@@ -26,7 +25,7 @@ public class HeartModel  implements HeartModelInterface, Runnable {
 	private static int attemps = 0;
 
 	protected HeartModel() {
-		//super(DJView);
+		// super(DJView);
 		thread = new Thread(this);
 		thread.start();
 	}
@@ -38,11 +37,11 @@ public class HeartModel  implements HeartModelInterface, Runnable {
 		attemps++;
 		return instance;
 	}
-	
+
 	public int getAttemps() {
 		return attemps;
 	}
-	
+
 	//
 
 	public void run() {
