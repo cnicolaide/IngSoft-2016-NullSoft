@@ -10,6 +10,12 @@ public class HeartModel  implements HeartModelInterface, Runnable {
 	int bpm = 90;
 	Random random = new Random(System.currentTimeMillis());
 	Thread thread;
+	
+	String type = "Heart";
+	
+	public String getType() {
+		return type;
+	}
 
 	// public HeartModel() {
 	// thread = new Thread(this);
@@ -17,7 +23,7 @@ public class HeartModel  implements HeartModelInterface, Runnable {
 	// }
 	//
 	private static HeartModel instance = null;
-//	private static int attemps = 0;
+	private static int attemps = 0;
 
 	protected HeartModel() {
 		//super(DJView);
@@ -28,15 +34,15 @@ public class HeartModel  implements HeartModelInterface, Runnable {
 	public static HeartModel getInstance() {
 		if (instance == null) {
 			instance = new HeartModel();
-//			attemps = 1;
 		}
-//		attemps++;
+		attemps++;
 		return instance;
 	}
 	
-//	public int getAttemps(){
-//		return attemps;
-//	}
+	public int getAttemps() {
+		return attemps;
+	}
+	
 	//
 
 	public void run() {
@@ -102,4 +108,5 @@ public class HeartModel  implements HeartModelInterface, Runnable {
 			observer.updateBPM();
 		}
 	}
+
 }

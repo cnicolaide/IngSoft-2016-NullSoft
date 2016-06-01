@@ -1,6 +1,7 @@
 package controller;
 
 import model.HeartAdapter;
+import model.HeartModel;
 import model.HeartModelInterface;
 import view.DJView;
 
@@ -24,12 +25,17 @@ public class HeartController implements ControllerInterface {
 	}
 
 	public void increaseBPM() {
-		System.out.println("HOLAAA" );
+		HeartModel heartModel = HeartModel.getInstance();
+		view.updateBPM();
 	}
 
 	public void decreaseBPM() {
 	}
 
+	@Override
 	public void setBPM(int bpm) {
+		// TODO Auto-generated method stub
+
 	}
+
 }
