@@ -58,7 +58,7 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 					if (y == (rect.height - bulletSize))
 						dir = 1;
 				}
-//				System.out.println(" -> " + x + " " + y + " " + dir);
+				System.out.println(" -> " + x + " " + y + " " + dir);
 				notifyBeatObservers();
 				notifyBPMObservers();
 				notifyBulletObservers();
@@ -81,7 +81,7 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 		}
 	}
 
-	private int getPointsX() {
+	public int getPointsX() {
 		int num;
 		do {
 			num = (int) Math.round(Math.random() * 10000);
@@ -89,7 +89,7 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 		return num;
 	}
 
-	private int getPointsY() {
+	public int getPointsY() {
 		int num;
 		do {
 			num = (int) Math.round(Math.random() * 10000);
@@ -97,7 +97,7 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 		return num;
 	}
 
-	private int dir() {
+	public int dir() {
 		int num;
 		do {
 			num = (int) Math.round(Math.random() * 10);

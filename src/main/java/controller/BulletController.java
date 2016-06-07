@@ -2,33 +2,34 @@ package controller;
 
 import model.BulletAdapter;
 import model.BulletModelInterface;
+import view.BulletView2;
 import view.DJView;
 
 public class BulletController implements ControllerInterface {
 
 	BulletModelInterface model;
-	DJView view;
+	BulletView2 view;
 
 	public BulletController(BulletModelInterface model) {
 		this.model = model;
-		view = new DJView(this, new BulletAdapter(model));
+		view = new BulletView2(this, new BulletAdapter(model));
 		view.createView();
-		view.createControls();
-		view.disableStopMenuItem();
-		view.disableStartMenuItem();
+//		view.createControls();
+//		view.disableStopMenuItem();
+//		view.disableStartMenuItem();
 		model.initialize();
 	}
 
 	public void start() {
 		model.on();
-		view.disableStartMenuItem();
-		view.enableStopMenuItem();
+//		view.disableStartMenuItem();
+//		view.enableStopMenuItem();
 	}
 
 	public void stop() {
 		model.off();
-		view.disableStopMenuItem();
-		view.enableStartMenuItem();
+//		view.disableStopMenuItem();
+//		view.enableStartMenuItem();
 	}
 
 	public void increaseBPM() {
