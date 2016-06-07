@@ -18,10 +18,10 @@ public interface BeatModelInterface {
 	void registerObserver(BPMObserver o);
 
 	void removeObserver(BPMObserver o);
-	
+
 	void registerObserver(BulletObserver o);
 
 	void removeObserver(BulletObserver o);
-
-	String getType();
+	
+	String getPos();
 }

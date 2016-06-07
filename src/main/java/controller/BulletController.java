@@ -5,7 +5,7 @@ import model.BulletModelInterface;
 import view.DJView;
 
 public class BulletController implements ControllerInterface {
-	
+
 	BulletModelInterface model;
 	DJView view;
 
@@ -15,33 +15,34 @@ public class BulletController implements ControllerInterface {
 		view.createView();
 		view.createControls();
 		view.disableStopMenuItem();
-		view.enableStartMenuItem();
+		view.disableStartMenuItem();
 		model.initialize();
 	}
 
-
-	@Override
 	public void start() {
-		// TODO Auto-generated method stub
+		model.on();
+		view.disableStartMenuItem();
+		view.enableStopMenuItem();
 	}
 
-	@Override
 	public void stop() {
-		// TODO Auto-generated method stub
+		model.off();
+		view.disableStopMenuItem();
+		view.enableStartMenuItem();
 	}
 
-	@Override
 	public void increaseBPM() {
-		view.updateBPM();
+		int bpm = model.getBPM();
+		model.setBPM(bpm - 10);
 	}
 
-	@Override
 	public void decreaseBPM() {
+		int bpm = model.getBPM();
+		model.setBPM(bpm + 10);
 	}
 
-	@Override
 	public void setBPM(int bpm) {
-		// TODO Auto-generated method stub
+		model.setBPM(bpm);
 	}
 
 }

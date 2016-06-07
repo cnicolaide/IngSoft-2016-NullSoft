@@ -11,6 +11,9 @@ public interface HeartModelInterface {
 
 	void removeObserver(BPMObserver o);
 
-	int getAttemps();
+	void registerObserver(BulletObserver o);
 
+	void removeObserver(BulletObserver o);
+
+	int getAttemps();
 }

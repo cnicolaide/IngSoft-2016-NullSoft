@@ -10,19 +10,23 @@ public interface BulletModelInterface {
 
 	void setBPM(int bpm);
 
-	void registerObserver(BeatObserver o);
+	int getBPM();
 
-	void removeObserver(BeatObserver o);
+	void registerObserver(BeatObserver o);
 
 	void registerObserver(BPMObserver o);
 
-	void removeObserver(BPMObserver o);
-
 	void registerObserver(BulletObserver o);
+
+	void removeObserver(BeatObserver o);
+
+	void removeObserver(BPMObserver o);
 
 	void removeObserver(BulletObserver o);
 
-	String getType();
-
 	int getX();
+
+	int getY();
+
+	int getDIR();
 }

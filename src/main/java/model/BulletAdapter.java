@@ -39,20 +39,16 @@ public class BulletAdapter implements BeatModelInterface {
 		bullet.removeObserver(o);
 	}
 
-	@Override
-	public String getType() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public void registerObserver(BulletObserver o) {
 		bullet.registerObserver(o);
 
 	}
 
-	@Override
 	public void removeObserver(BulletObserver o) {
 		bullet.removeObserver(o);
+	}
+
+	public String getPos() {
+		return bullet.getX() + " ," + bullet.getY() + " ," + bullet.getDIR();
 	}
 }

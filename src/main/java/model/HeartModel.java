@@ -3,18 +3,15 @@ package model;
 import java.util.*;
 
 public class HeartModel implements HeartModelInterface, Runnable {
+	
 	ArrayList beatObservers = new ArrayList();
 	ArrayList bpmObservers = new ArrayList();
+	ArrayList bulletObservers = new ArrayList();
+
 	int time = 1000;
 	int bpm = 90;
 	Random random = new Random(System.currentTimeMillis());
 	Thread thread;
-
-	String type = "Heart";
-
-	public String getType() {
-		return type;
-	}
 
 	private static HeartModel instance = null;
 	private static int attemps = 0;
@@ -100,4 +97,21 @@ public class HeartModel implements HeartModelInterface, Runnable {
 		}
 	}
 
+	public void registerObserver(BulletObserver o) {
+		bulletObservers.add(o);
+	}
+
+	public void removeObserver(BulletObserver o) {
+		int i = bulletObservers.indexOf(o);
+		if (i >= 0) {
+			bulletObservers.remove(i);
+		}
+	}
+
+	public void notifyBulletObservers() {
+		for (int i = 0; i < bulletObservers.size(); i++) {
+			BulletObserver observer = (BulletObserver) bulletObservers.get(i);
+			observer.updateBPM();
+		}
+	}
 }

@@ -10,20 +10,14 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 	ArrayList beatObservers = new ArrayList();
 	ArrayList bpmObservers = new ArrayList();
 	ArrayList bulletObservers = new ArrayList();
-	
-	String type = "Bullet";
 
 	private Rectangle rect;
-	private int x, y, dir;
+	private int x, y, dir, bulletSize = 12, delay = 500, formSize = 200;
 	private Thread thread;
 	private boolean running;
 
-	public String getType() {
-		return type;
-	}
-
 	public BulletModel() {
-		setSize(200, 200);
+		setSize(formSize, formSize);
 		rect = getBounds();
 		this.start();
 	}
@@ -43,8 +37,7 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 				if (dir == 2) {
 					x++;
 					y--;
-					if (x == (rect.width - 12)) // Es menos 12 por el diametro
-												// de la pelotita
+					if (x == (rect.width - bulletSize))
 						dir = 1;
 					if (y == 0)
 						dir = 3;
@@ -52,9 +45,9 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 				if (dir == 3) {
 					x++;
 					y++;
-					if (x == (rect.width - 12))
+					if (x == (rect.width - bulletSize))
 						dir = 4;
-					if (y == (rect.height - 12))
+					if (y == (rect.height - bulletSize))
 						dir = 2;
 				}
 				if (dir == 4) {
@@ -62,15 +55,15 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 					y++;
 					if (x == 0)
 						dir = 3;
-					if (y == (rect.height - 12))
+					if (y == (rect.height - bulletSize))
 						dir = 1;
 				}
-				System.out.println(" -> " + x + " " + y + " " + dir);
+//				System.out.println(" -> " + x + " " + y + " " + dir);
 				notifyBeatObservers();
 				notifyBPMObservers();
 				notifyBulletObservers();
 				repaint();
-				thread.sleep(250);
+				thread.sleep(delay);
 			}
 		} catch (InterruptedException e) {
 			running = false;
@@ -92,7 +85,7 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 		int num;
 		do {
 			num = (int) Math.round(Math.random() * 10000);
-		} while (num >= rect.width - 12);
+		} while (num >= rect.width - bulletSize);
 		return num;
 	}
 
@@ -100,7 +93,7 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 		int num;
 		do {
 			num = (int) Math.round(Math.random() * 10000);
-		} while (num >= rect.height - 12);
+		} while (num >= rect.height - bulletSize);
 		return num;
 	}
 
@@ -166,32 +159,34 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 		}
 	}
 
-	@Override
 	public void initialize() {
-		// TODO Auto-generated method stub
-
 	}
 
-	@Override
 	public void on() {
-		// TODO Auto-generated method stub
-
 	}
 
-	@Override
 	public void off() {
-		// TODO Auto-generated method stub
-
 	}
 
-	@Override
-	public void setBPM(int bpm) {
-		// TODO Auto-generated method stub
-
+	public void setBPM(int delay) {
+		this.delay = delay;
+		notifyBulletObservers();
 	}
 
-	@Override
 	public int getX() {
 		return x;
 	}
+	
+	public int getY() {
+		return y;
+	}
+	
+	public int getDIR() {
+		return dir;
+	}
+
+	public int getBPM() {
+		return delay;
+	}
+
 }

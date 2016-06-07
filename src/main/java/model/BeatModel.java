@@ -14,11 +14,6 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 	int bpm = 90;
 	Sequence sequence;
 	Track track;
-	String type = "Beat";
-
-	public String getType() {
-		return type;
-	}
 
 	public void initialize() {
 		setUpMidi();
@@ -181,5 +176,11 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 			BulletObserver observer = (BulletObserver) bulletObservers.get(i);
 			observer.updateBPM();
 		}
+	}
+
+	@Override
+	public String getPos() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

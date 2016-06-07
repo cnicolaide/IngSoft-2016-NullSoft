@@ -44,20 +44,17 @@ public class HeartAdapter implements BeatModelInterface {
 	}
 
 	@Override
-	public String getType() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public void registerObserver(BulletObserver o) {
-		// TODO Auto-generated method stub
-		
+		heart.registerObserver(o);
 	}
 
 	@Override
 	public void removeObserver(BulletObserver o) {
-		// TODO Auto-generated method stub
-		
+		heart.removeObserver(o);
+	}
+
+	@Override
+	public String getPos() {
+		return null;
 	}
 }

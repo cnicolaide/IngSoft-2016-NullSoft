@@ -10,7 +10,7 @@ public class HeartTestDrive {
 	// HeartModel heartModel = new HeartModel();
 	// ControllerInterface model = new HeartController(heartModel);
 	// }
-	//
+
 	public static void main(String[] args) {
 		HeartModel bulletModel = HeartModel.getInstance();
 		ControllerInterface model = new HeartController(bulletModel);

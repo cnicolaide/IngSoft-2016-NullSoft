@@ -34,8 +34,6 @@ public class HeartController implements ControllerInterface {
 
 	@Override
 	public void setBPM(int bpm) {
-		// TODO Auto-generated method stub
-
 	}
 
 }
