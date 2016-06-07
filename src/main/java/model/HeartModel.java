@@ -16,16 +16,10 @@ public class HeartModel implements HeartModelInterface, Runnable {
 		return type;
 	}
 
-	// public HeartModel() {
-	// thread = new Thread(this);
-	// thread.start();
-	// }
-	//
 	private static HeartModel instance = null;
 	private static int attemps = 0;
 
 	protected HeartModel() {
-		// super(DJView);
 		thread = new Thread(this);
 		thread.start();
 	}
@@ -41,8 +35,6 @@ public class HeartModel implements HeartModelInterface, Runnable {
 	public int getAttemps() {
 		return attemps;
 	}
-
-	//
 
 	public void run() {
 		int lastrate = -1;

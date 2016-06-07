@@ -1,10 +1,10 @@
 package model;
 
-public class HeartAdapter implements BeatModelInterface {
-	HeartModelInterface heart;
+public class BulletAdapter implements BeatModelInterface {
+	BulletModelInterface bullet;
 
-	public HeartAdapter(HeartModelInterface heart) {
-		this.heart = heart;
+	public BulletAdapter(BulletModelInterface bullet) {
+		this.bullet = bullet;
 	}
 
 	public void initialize() {
@@ -16,31 +16,27 @@ public class HeartAdapter implements BeatModelInterface {
 	public void off() {
 	}
 
-	// public int getBPM() {
-	// return heart.getHeartRate();
-	// }
-
 	public int getBPM() {
-		return heart.getAttemps();
+		return bullet.getX();
 	}
 
 	public void setBPM(int bpm) {
 	}
 
 	public void registerObserver(BeatObserver o) {
-		heart.registerObserver(o);
+		bullet.registerObserver(o);
 	}
 
 	public void removeObserver(BeatObserver o) {
-		heart.removeObserver(o);
+		bullet.removeObserver(o);
 	}
 
 	public void registerObserver(BPMObserver o) {
-		heart.registerObserver(o);
+		bullet.registerObserver(o);
 	}
 
 	public void removeObserver(BPMObserver o) {
-		heart.removeObserver(o);
+		bullet.removeObserver(o);
 	}
 
 	@Override
@@ -51,13 +47,12 @@ public class HeartAdapter implements BeatModelInterface {
 
 	@Override
 	public void registerObserver(BulletObserver o) {
-		// TODO Auto-generated method stub
-		
+		bullet.registerObserver(o);
+
 	}
 
 	@Override
 	public void removeObserver(BulletObserver o) {
-		// TODO Auto-generated method stub
-		
+		bullet.removeObserver(o);
 	}
 }

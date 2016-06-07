@@ -1,6 +1,7 @@
 package model;
 
-public interface BeatModelInterface {
+public interface BulletModelInterface {
+
 	void initialize();
 
 	void on();
@@ -9,8 +10,6 @@ public interface BeatModelInterface {
 
 	void setBPM(int bpm);
 
-	int getBPM();
-
 	void registerObserver(BeatObserver o);
 
 	void removeObserver(BeatObserver o);
@@ -18,10 +17,12 @@ public interface BeatModelInterface {
 	void registerObserver(BPMObserver o);
 
 	void removeObserver(BPMObserver o);
-	
+
 	void registerObserver(BulletObserver o);
 
 	void removeObserver(BulletObserver o);
 
 	String getType();
+
+	int getX();
 }

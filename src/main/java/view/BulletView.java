@@ -10,7 +10,7 @@ public class BulletView extends JFrame {
 	BulletView() {
 		setSize(200, 200);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		rect = getBounds(); // Para obtener las medidas del JFrame
+		rect = getBounds();
 		pantalla p = new pantalla((int) rect.width, (int) rect.height);
 		getContentPane().add(p);
 		pack();
@@ -26,9 +26,7 @@ public class BulletView extends JFrame {
 class pantalla extends Canvas implements Runnable {
 
 	private Rectangle rect;
-	private int x;
-	private int y;
-	private int dir;
+	private int x, y, dir;
 	private Thread t;
 	private boolean running;
 
@@ -80,9 +78,9 @@ class pantalla extends Canvas implements Runnable {
 					if (y == (rect.height - 12))
 						dir = 1;
 				}
-				// System.out.println(" -> " + x + " " + y + " " + dir);
+				System.out.println(" -> " + x + " " + y + " " + dir);
 				repaint();
-				t.sleep(5);
+				t.sleep(255);
 			}
 		} catch (InterruptedException e) {
 			running = false;
@@ -93,32 +91,11 @@ class pantalla extends Canvas implements Runnable {
 		if (t == null) {
 			x = getPointsX();
 			y = getPointsY();
-			/*
-			 * Con el metodo "dir()" obtengo la direccion inicial de la pelota
-			 * Lo maneje como un plano cartesiano en forma de X... A ver si me
-			 * explico jejejeje!!!!!
-			 */
 			dir = dir();
 			running = true;
 			t = new Thread(this);
 			t.start();
 		}
-	}
-
-	public void update(Graphics g) {
-		/*
-		 * Esto lo obtuve de un ejemplo: Segun yo... esto me limpia la pantalla
-		 * para asi poder dibujar en el canvas el objeto en su nueva posicion.
-		 * Si esto no se hace... el objeto dibujado con anterioridad aparecera y
-		 * sera sobre-dibujado Pero si alguien sabe exactamente que rollo con
-		 * esto que me lo explique; arriba tengo mis correos U_U
-		 */
-		rect = getBounds();
-		Image image = createImage(rect.width, rect.height);
-		Graphics gi = image.getGraphics();
-		gi.clearRect(0, 0, rect.width, rect.height);
-		paint(gi);
-		g.drawImage(image, 0, 0, null);
 	}
 
 	/* Metodo que da la coordenada X inicial */

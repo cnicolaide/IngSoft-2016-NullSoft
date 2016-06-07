@@ -1,12 +1,24 @@
 package controller;
 
-import model.BulletModel;
+import model.BulletAdapter;
+import model.BulletModelInterface;
+import view.DJView;
 
 public class BulletController implements ControllerInterface {
+	
+	BulletModelInterface model;
+	DJView view;
 
-	public BulletController(BulletModel model) {
-		// TODO Auto-generated constructor stub
+	public BulletController(BulletModelInterface model) {
+		this.model = model;
+		view = new DJView(this, new BulletAdapter(model));
+		view.createView();
+		view.createControls();
+		view.disableStopMenuItem();
+		view.enableStartMenuItem();
+		model.initialize();
 	}
+
 
 	@Override
 	public void start() {
@@ -20,12 +32,11 @@ public class BulletController implements ControllerInterface {
 
 	@Override
 	public void increaseBPM() {
-		// TODO Auto-generated method stub
+		view.updateBPM();
 	}
 
 	@Override
 	public void decreaseBPM() {
-		// TODO Auto-generated method stub
 	}
 
 	@Override

@@ -8,8 +8,9 @@ import controller.ControllerInterface;
 import model.BPMObserver;
 import model.BeatModelInterface;
 import model.BeatObserver;
+import model.BulletObserver;
 
-public class DJView implements ActionListener, BeatObserver, BPMObserver {
+public class DJView implements ActionListener, BeatObserver, BPMObserver, BulletObserver {
 	BeatModelInterface model;
 	ControllerInterface controller;
 	JFrame viewFrame;
@@ -31,6 +32,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
 	public DJView(ControllerInterface controller, BeatModelInterface model) {
 		this.controller = controller;
 		this.model = model;
+		model.registerObserver((BulletObserver) this);
 		model.registerObserver((BeatObserver) this);
 		model.registerObserver((BPMObserver) this);
 	}
@@ -161,8 +163,10 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
 				if (bpmOutputLabel != null) {
 					if (model.getType() == "Beat")
 						bpmOutputLabel.setText("Current BPM: " + model.getBPM());
-					else
-						bpmOutputLabel.setText("Intentos : " + model.getBPM());
+					else if (model.getType() == "Heart")
+						bpmOutputLabel.setText("Intentos: " + model.getBPM());
+					else if (model.getType() == "Bullet")
+						bpmOutputLabel.setText("Posicion: " + model.getBPM());
 				}
 			}
 		}
