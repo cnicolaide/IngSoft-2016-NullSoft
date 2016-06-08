@@ -54,7 +54,27 @@ public class HeartAdapter implements BeatModelInterface {
 	}
 
 	@Override
-	public String getPos() {
-		return null;
+	public int getPosX() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
+
+	@Override
+	public int getPosY() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getFormSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getBulletSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

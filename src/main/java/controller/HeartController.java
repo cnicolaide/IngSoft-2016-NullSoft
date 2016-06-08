@@ -25,7 +25,7 @@ public class HeartController implements ControllerInterface {
 	}
 
 	public void increaseBPM() {
-		HeartModel heartModel = HeartModel.getInstance();
+		HeartModel newmodel = HeartModel.getInstance();
 		view.updateBPM();
 	}
 

@@ -28,5 +28,7 @@ public interface BulletModelInterface {
 
 	int getY();
 
-	int getDIR();
+	int getFormSize();
+
+	int getBulletSize();
 }

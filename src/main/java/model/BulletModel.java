@@ -12,7 +12,7 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 	ArrayList bulletObservers = new ArrayList();
 
 	private Rectangle rect;
-	private int x, y, dir, bulletSize = 12, delay = 500, formSize = 200;
+	private int x, y, dir, bulletSize = 20, delay = 200, formSize = 200;
 	private Thread thread;
 	private boolean running;
 
@@ -58,11 +58,11 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 					if (y == (rect.height - bulletSize))
 						dir = 1;
 				}
-				System.out.println(" -> " + x + " " + y + " " + dir);
+				// System.out.println(" -> " + x + " " + y + " " + dir);
 				notifyBeatObservers();
 				notifyBPMObservers();
 				notifyBulletObservers();
-				repaint();
+				// repaint();
 				thread.sleep(delay);
 			}
 		} catch (InterruptedException e) {
@@ -81,7 +81,7 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 		}
 	}
 
-	public int getPointsX() {
+	private int getPointsX() {
 		int num;
 		do {
 			num = (int) Math.round(Math.random() * 10000);
@@ -89,7 +89,7 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 		return num;
 	}
 
-	public int getPointsY() {
+	private int getPointsY() {
 		int num;
 		do {
 			num = (int) Math.round(Math.random() * 10000);
@@ -97,7 +97,7 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 		return num;
 	}
 
-	public int dir() {
+	private int dir() {
 		int num;
 		do {
 			num = (int) Math.round(Math.random() * 10);
@@ -176,17 +176,21 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 	public int getX() {
 		return x;
 	}
-	
+
 	public int getY() {
 		return y;
-	}
-	
-	public int getDIR() {
-		return dir;
 	}
 
 	public int getBPM() {
 		return delay;
+	}
+
+	public int getFormSize() {
+		return formSize;
+	}
+
+	public int getBulletSize() {
+		return bulletSize;
 	}
 
 }

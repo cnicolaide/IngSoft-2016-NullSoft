@@ -3,7 +3,7 @@ package model;
 import java.util.*;
 
 public class HeartModel implements HeartModelInterface, Runnable {
-	
+
 	ArrayList beatObservers = new ArrayList();
 	ArrayList bpmObservers = new ArrayList();
 	ArrayList bulletObservers = new ArrayList();

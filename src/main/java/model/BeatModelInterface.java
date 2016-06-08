@@ -22,6 +22,13 @@ public interface BeatModelInterface {
 	void registerObserver(BulletObserver o);
 
 	void removeObserver(BulletObserver o);
-	
-	String getPos();
+
+	int getPosX();
+
+	int getPosY();
+
+	int getFormSize();
+
+	int getBulletSize();
+
 }

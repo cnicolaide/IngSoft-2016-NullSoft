@@ -48,7 +48,19 @@ public class BulletAdapter implements BeatModelInterface {
 		bullet.removeObserver(o);
 	}
 
-	public String getPos() {
-		return bullet.getX() + " ," + bullet.getY() + " ," + bullet.getDIR();
+	public int getPosX() {
+		return bullet.getX();
+	}
+
+	public int getPosY() {
+		return bullet.getY();
+	}
+
+	public int getFormSize() {
+		return bullet.getFormSize();
+	}
+
+	public int getBulletSize() {
+		return bullet.getBulletSize();
 	}
 }
