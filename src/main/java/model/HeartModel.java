@@ -16,7 +16,7 @@ public class HeartModel implements HeartModelInterface, Runnable {
 	private static HeartModel instance = null;
 	private static int attemps = 0;
 
-	protected HeartModel() {
+	private HeartModel() {
 		thread = new Thread(this);
 		thread.start();
 	}

@@ -161,11 +161,11 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 				}
 			} else {
 				if (bpmOutputLabel != null) {
-					if (model.getClass().getName() == "model.BeatModel")
+					if (model instanceof model.BeatModel)
 						bpmOutputLabel.setText("Current BPM: " + model.getBPM());
-					else if (model.getClass().getName() == "model.HeartAdapter")
+					else if (model instanceof model.HeartAdapter)
 						bpmOutputLabel.setText("Intentos: " + model.getBPM());
-					else if (model.getClass().getName() == "model.BulletAdapter")
+					else if (model instanceof model.BulletAdapter)
 						bpmOutputLabel.setText("Posicion: " + model.getPosX() + ", " + model.getPosY());
 				}
 			}
