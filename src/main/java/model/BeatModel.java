@@ -178,28 +178,19 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 		}
 	}
 
-	@Override
 	public int getPosX() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
 	public int getPosY() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
 	public int getFormSize() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
 	public int getBulletSize() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
-
 }

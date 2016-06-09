@@ -14,7 +14,9 @@ public class BulletController implements ControllerInterface {
 		this.model = model;
 		view = new DJView(this, new BulletAdapter(model));
 		view.createView();
-		model.initialize();
+		view.createControls();
+		view.disableStopMenuItem();
+		view.disableStartMenuItem();
 	}
 
 	public void start() {
@@ -38,5 +40,4 @@ public class BulletController implements ControllerInterface {
 	public void setBPM(int bpm) {
 		model.setBPM(bpm);
 	}
-
 }

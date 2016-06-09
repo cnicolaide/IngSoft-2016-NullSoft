@@ -41,7 +41,6 @@ public class BulletAdapter implements BeatModelInterface {
 
 	public void registerObserver(BulletObserver o) {
 		bullet.registerObserver(o);
-
 	}
 
 	public void removeObserver(BulletObserver o) {

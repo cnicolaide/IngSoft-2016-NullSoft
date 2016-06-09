@@ -30,5 +30,4 @@ public interface BeatModelInterface {
 	int getFormSize();
 
 	int getBulletSize();
-
 }
