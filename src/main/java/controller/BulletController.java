@@ -14,17 +14,21 @@ public class BulletController implements ControllerInterface {
 		this.model = model;
 		view = new BulletView(this, new BulletAdapter(model));
 		view.createView();
-//		view.createControls();
-//		view.disableStopMenuItem();
-//		view.disableStartMenuItem();
+		view.createControls();
+		view.disableStopMenuItem();
+		view.disableStartMenuItem();
 	}
 
 	public void start() {
 		model.on();
+		view.disableStartMenuItem();
+		view.enableStopMenuItem();
 	}
 
 	public void stop() {
 		model.off();
+		view.disableStopMenuItem();
+		view.enableStartMenuItem();
 	}
 
 	public void increaseBPM() {

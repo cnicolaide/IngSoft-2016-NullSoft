@@ -1,36 +1,43 @@
 package view;
 
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
 import java.awt.Rectangle;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 import controller.ControllerInterface;
 import model.BeatModelInterface;
-import model.BulletObserver;
 
-public class BulletView implements BulletObserver {
+public class BulletView extends DJView {
+
+	public BulletView(ControllerInterface controller, BeatModelInterface model) {
+		super(controller, model);
+		this.controller = controller;
+		this.model = model;
+	}
 
 	BeatModelInterface model;
 	ControllerInterface controller;
 	JFrame viewFrame;
 	JPanel viewPanel;
 	Screen p;
-	private Rectangle rect;
-
-	public BulletView(ControllerInterface controller, BeatModelInterface model) {
-		this.controller = controller;
-		this.model = model;
-		model.registerObserver((BulletObserver) this);
-	}
 
 	public void createView() {
-		viewFrame = new JFrame("Bullet View");
+		viewFrame = new JFrame("View");
 		viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		viewFrame.setSize(model.getFormSize(), model.getFormSize());
-		rect = viewFrame.getBounds();
-		p = new Screen((int) rect.width, (int) rect.height, model.getBulletSize());
+		p = new Screen(model.getFormSize(), model.getFormSize(), model.getBulletSize());
+		viewPanel = new JPanel(new GridLayout(1, 1));
+		bpmOutputLabel = new JLabel("offline", SwingConstants.CENTER);
+		JPanel bpmPanel = new JPanel(new GridLayout(1, 1));
+		bpmPanel.add(bpmOutputLabel);
+		viewPanel.add(bpmPanel);
 		viewFrame.getContentPane().add(p);
+		viewFrame.getContentPane().add(viewPanel, BorderLayout.AFTER_LAST_LINE);
 		viewFrame.pack();
 		viewFrame.setVisible(true);
 	}
@@ -40,6 +47,7 @@ public class BulletView implements BulletObserver {
 			p.setX(model.getPosX());
 			p.setY(model.getPosY());
 			p.setDelay(model.getBPM());
+			bpmOutputLabel.setText("Speed: " + model.getBPM() + " Posicion: " + model.getPosX() + ", " + model.getPosY());
 		}
 	}
 }

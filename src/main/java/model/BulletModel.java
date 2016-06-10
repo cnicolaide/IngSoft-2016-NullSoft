@@ -62,7 +62,6 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 				notifyBeatObservers();
 				notifyBPMObservers();
 				notifyBulletObservers();
-				// repaint();
 				thread.sleep(delay);
 			}
 		} catch (InterruptedException e) {

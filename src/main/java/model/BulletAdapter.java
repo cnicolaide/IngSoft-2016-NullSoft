@@ -17,7 +17,7 @@ public class BulletAdapter implements BeatModelInterface {
 	}
 
 	public int getBPM() {
-		return bullet.getX();
+		return bullet.getBPM();
 	}
 
 	public void setBPM(int bpm) {
