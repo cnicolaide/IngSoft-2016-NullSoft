@@ -47,7 +47,8 @@ public class BulletView extends DJView {
 			p.setX(model.getPosX());
 			p.setY(model.getPosY());
 			p.setDelay(model.getBPM());
-			bpmOutputLabel.setText("Speed: " + model.getBPM() + " Posicion: " + model.getPosX() + ", " + model.getPosY());
+			bpmOutputLabel
+					.setText("Speed: " + model.getBPM() + " Posicion: " + model.getPosX() + ", " + model.getPosY());
 		}
 	}
 }

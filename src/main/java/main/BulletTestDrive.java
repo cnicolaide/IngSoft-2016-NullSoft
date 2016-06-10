@@ -8,6 +8,6 @@ public class BulletTestDrive {
 
 	public static void main(String[] args) {
 		BulletModel bulletModel = new BulletModel();
-		ControllerInterface model = new BulletController(bulletModel);
+		ControllerInterface bulletController = new BulletController(bulletModel);
 	}
 }

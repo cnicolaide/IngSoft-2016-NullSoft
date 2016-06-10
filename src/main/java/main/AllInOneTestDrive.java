@@ -15,8 +15,8 @@ public class AllInOneTestDrive {
 		BulletModel bulletModel = new BulletModel();
 		ControllerInterface bulletController = new BulletController(bulletModel);
 
-		BeatModelInterface BeatModel = new BeatModel();
-		ControllerInterface beatController = new BeatController(BeatModel);
+		BeatModelInterface beatModel = new BeatModel();
+		ControllerInterface beatController = new BeatController(beatModel);
 
 		HeartModel heartModel = HeartModel.getInstance();
 		ControllerInterface heartController = new HeartController(heartModel);
