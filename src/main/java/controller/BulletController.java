@@ -8,11 +8,12 @@ import view.DJView;
 public class BulletController implements ControllerInterface {
 
 	BulletModelInterface model;
-	DJView view;
+	BulletView view;
+//	DJView view2;
 
 	public BulletController(BulletModelInterface model) {
 		this.model = model;
-		view = new DJView(this, new BulletAdapter(model));
+		view = new BulletView(this, new BulletAdapter(model));
 		view.createView();
 		view.createControls();
 		view.disableStopMenuItem();

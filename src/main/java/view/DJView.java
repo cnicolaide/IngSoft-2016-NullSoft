@@ -28,6 +28,9 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 	JMenu menu;
 	JMenuItem startMenuItem;
 	JMenuItem stopMenuItem;
+	private JMenu mnView;
+	private JMenuItem mntmBeatbar;
+	private JMenuItem mntmScreen;
 
 	public DJView(ControllerInterface controller, BeatModelInterface model) {
 		this.controller = controller;
@@ -55,6 +58,9 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 		viewFrame.setVisible(true);
 	}
 
+	/**
+	 * @wbp.parser.entryPoint
+	 */
 	public void createControls() {
 		// Create all Swing components here
 		JFrame.setDefaultLookAndFeelDecorated(true);
@@ -90,6 +96,27 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 		menu.add(exit);
 		menuBar.add(menu);
 		controlFrame.setJMenuBar(menuBar);
+		
+		//////////////////////////////////////////
+		if (model instanceof model.BulletAdapter) {
+			mnView = new JMenu("View");
+			menuBar.add(mnView);
+
+			mntmBeatbar = new JMenuItem("BeatBar");
+			mntmBeatbar.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent event) {
+				}
+			});
+			mnView.add(mntmBeatbar);
+
+			mntmScreen = new JMenuItem("Screen");
+			mntmScreen.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent event) {
+				}
+			});
+			mnView.add(mntmScreen);
+		}		
+		//////////////////////////////////////////
 
 		bpmTextField = new JTextField(2);
 		bpmLabel = new JLabel("Enter BPM:", SwingConstants.RIGHT);
