@@ -1,27 +1,18 @@
 apply plugin: 'java'
-apply plugin: 'checkstyle'
 apply plugin: 'pmd'
 apply plugin: 'findbugs'
 apply plugin: "jacoco"
+apply plugin: "idea"
+apply plugin: "eclipse"
+apply plugin: "build-dashboard"
+apply plugin: "wrapper"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile 'junit:junit:4.10'
-}
-
-checkstyle {
-    ignoreFailures = true
-    toolVersion = '6.6'
-}
-
-tasks.withType(Checkstyle) {
-    reports {
-        xml.enabled = false
-        html.enabled = true
-    }
+    testCompile 'junit:junit:4.12'
 }
 
 pmd {
