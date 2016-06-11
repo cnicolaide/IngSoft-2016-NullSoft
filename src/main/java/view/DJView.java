@@ -8,6 +8,7 @@ import controller.ControllerInterface;
 import model.BPMObserver;
 import model.BeatModelInterface;
 import model.BeatObserver;
+import model.BulletAdapter;
 import model.BulletObserver;
 
 public class DJView implements ActionListener, BeatObserver, BPMObserver, BulletObserver {
@@ -30,7 +31,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 	JMenuItem stopMenuItem;
 
 	private JComboBox<String> comboBox;
-
+	
 	public DJView(ControllerInterface controller, BeatModelInterface model) {
 		this.controller = controller;
 		this.model = model;

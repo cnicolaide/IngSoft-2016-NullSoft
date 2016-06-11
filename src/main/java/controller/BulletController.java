@@ -8,11 +8,12 @@ import view.DJView;
 public class BulletController implements ControllerInterface {
 
 	BulletModelInterface model;
-	BulletView view;
-//	DJView view2;
+	DJView view;
 
 	public BulletController(BulletModelInterface model) {
 		this.model = model;
+		view = new DJView(this, new BulletAdapter(model));
+		view.createView();
 		view = new BulletView(this, new BulletAdapter(model));
 		view.createView();
 		view.createControls();
