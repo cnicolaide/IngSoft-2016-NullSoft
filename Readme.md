@@ -7,8 +7,13 @@
 ### Listado de la funcionalidad incluida (con el estado de implementación de c/u).
 ### Pass/Fail Ratio de sistema.
 ### Bugs conocidos (i.e. no resueltos) en la entrega.
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603262bugs.png)
 ### Lugar/link del entregable y de las instrucciones de instalación.
-
+1. Clonar el repositorio de GitHub
+1. Abrir la consola de sistema cmd
+1. Hacer change directory (cd) a la carpeta del proyecto. Ej: cd C:\Users\myuser\Desktop\IngSoft-2016-NullSoft
+1. Correr el comando gradlew build
+ 
 ## 2- MANEJO DE LAS CONFIGURACIONES
 
 ### Propósito y alcance
@@ -198,20 +203,36 @@ La dirección de la herramienta se encuentra definido en la sección superior.
 ## 3- REQUERIMIENTOS
 
 ### Diagramas de Casos de Usos
+#### BeatModel
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594441usecasediagram1.png)
+#### BulletModel
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603244casodeusobullet.png)
 ### Diagramas de Actividades
+#### BeatModel
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594439activitydiagram1.png)
+#### BulletModel
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603247actividades-bullet.png)
 ### Diagramas de Secuencias
+#### BeatModel
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9595640secuencia1.jpg)
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9595644secuencia2.jpg)
+#### BulletModel
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603248secuenciabullet.png)
 
 ### Requerimientos Funcionales
 
+#### BeatModel
 - Se reproducirá solo una pista de audio que no será posible alterar.
 - El ritmo (BPM) puede ser aumentado y disminuido  en valores que van de 0 a 1000.
 - Se debe poder detener la reproducción de audio y reanudar tantas veces como se desee.
 - El usuario debe poder observar las pulsaciones a través de una representación gráfica.
 - Se debe informar el ritmo al cual se está reproduciendo la música.
+#### BulletModel
+- Se hará rebotar una pelota contra cuatro paredes.
+- La velocidad puede ser aumentada o disminuida.
+- El usuario debe poder observar el movimiento de la pelota a través de una representación gráfica.
+- El usuario no podra modificar la trayectoria de la pelota en el mapa.
+- Se debe poder informar la velocidad y la posición de la pelota cuando esta está en movimiento.
 
 ### Requerimientos No Funcionales
 
@@ -224,22 +245,29 @@ La dirección de la herramienta se encuentra definido en la sección superior.
 
 ### Diagrama de Arquitectura Preliminar
 
+#### BulletModel
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9603258arquitecturaprelimin.jpg)
+
 ### Matriz de Trazabilidad
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603259trazabilidad.png)
 
 ## 4- ARQUITECTURA
+
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603251arquitectura.png)
 
 Se aplica el patrón de arquitectura MVC permitiendo independizar la lógica y la parte visual del sistema usando para eso un controlador que administra los procesos sirviendo como puente entre estos.
 
 **La agrupación de clases de nuestro sistema es:**
 
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594464type-hierarchy.png)
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594456package-structure.png)
 
 ## 5- DISEÑO E IMPLEMENTACIÓN
 ### Diagramas de Clase
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9595319clases.png)
 ### Diagramas de Objeto
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9603250diagramaobjetosbulle.jpg)
 ### Diagramas de Paquetes
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594456package-structure.png)
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9603255diagramapaquetes.jpg)
 
 ## 6- PRUEBAS UNITARIAS Y DEL SISTEMA
 ## 7- DATOS HISTÓRICOS
