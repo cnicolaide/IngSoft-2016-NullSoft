@@ -28,9 +28,8 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 	JMenu menu;
 	JMenuItem startMenuItem;
 	JMenuItem stopMenuItem;
-	private JMenu mnView;
-	private JMenuItem mntmBeatbar;
-	private JMenuItem mntmScreen;
+
+	private JComboBox<String> comboBox;
 
 	public DJView(ControllerInterface controller, BeatModelInterface model) {
 		this.controller = controller;
@@ -40,8 +39,10 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 		model.registerObserver((BPMObserver) this);
 	}
 
+	/**
+	 * @wbp.parser.entryPoint
+	 */
 	public void createView() {
-		// Create all Swing components here
 		viewPanel = new JPanel(new GridLayout(1, 2));
 		viewFrame = new JFrame("View");
 		viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,13 +50,30 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 		bpmOutputLabel = new JLabel("offline", SwingConstants.CENTER);
 		beatBar = new BeatBar();
 		beatBar.setValue(0);
-		JPanel bpmPanel = new JPanel(new GridLayout(2, 1));
+		JPanel bpmPanel = new JPanel(new GridLayout(3, 1));
+
+		comboBox = new JComboBox<String>();
+		comboBox.setMaximumRowCount(3);
+		comboBox.setModel(new DefaultComboBoxModel<String>(new String[] { "BulletModel", "BeatModel", "HeartModel" }));
+		comboBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		bpmPanel.add(comboBox);
 		bpmPanel.add(beatBar);
 		bpmPanel.add(bpmOutputLabel);
 		viewPanel.add(bpmPanel);
 		viewFrame.getContentPane().add(viewPanel, BorderLayout.CENTER);
 		viewFrame.pack();
 		viewFrame.setVisible(true);
+
+		if (model instanceof model.BulletAdapter) {
+			comboBox.setSelectedIndex(0);
+		} else if (model instanceof model.BeatModel) {
+			comboBox.setSelectedIndex(1);
+		} else if (model instanceof model.HeartAdapter) {
+			comboBox.setSelectedIndex(2);
+		}
 	}
 
 	/**
@@ -96,26 +114,26 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 		menu.add(exit);
 		menuBar.add(menu);
 		controlFrame.setJMenuBar(menuBar);
-		
+
 		//////////////////////////////////////////
-		if (model instanceof model.BulletAdapter) {
-			mnView = new JMenu("View");
-			menuBar.add(mnView);
 
-			mntmBeatbar = new JMenuItem("BeatBar");
-			mntmBeatbar.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent event) {
-				}
-			});
-			mnView.add(mntmBeatbar);
-
-			mntmScreen = new JMenuItem("Screen");
-			mntmScreen.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent event) {
-				}
-			});
-			mnView.add(mntmScreen);
-		}		
+		// mnView = new JMenu("View");
+		// menuBar.add(mnView);
+		//
+		// mntmBeatbar = new JMenuItem("BeatBar");
+		// mntmBeatbar.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent event) {
+		// }
+		// });
+		// mnView.add(mntmBeatbar);
+		//
+		// mntmScreen = new JMenuItem("Screen");
+		// mntmScreen.addActionListener(new ActionListener() {
+		// public void actionPerformed(ActionEvent event) {
+		// }
+		// });
+		// mnView.add(mntmScreen);
+		// }
 		//////////////////////////////////////////
 
 		bpmTextField = new JTextField(2);

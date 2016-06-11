@@ -7,18 +7,20 @@ import controller.HeartController;
 import model.BeatModel;
 import model.BeatModelInterface;
 import model.BulletModel;
+import model.BulletModelInterface;
 import model.HeartModel;
+import model.HeartModelInterface;
 
 public class AllInOneTestDrive {
 
 	public static void main(String[] args) {
-		BulletModel bulletModel = new BulletModel();
+		BulletModelInterface bulletModel = new BulletModel();
 		ControllerInterface bulletController = new BulletController(bulletModel);
 
 		BeatModelInterface beatModel = new BeatModel();
 		ControllerInterface beatController = new BeatController(beatModel);
 
-		HeartModel heartModel = HeartModel.getInstance();
+		HeartModelInterface heartModel = HeartModel.getInstance();
 		ControllerInterface heartController = new HeartController(heartModel);
 	}
 }

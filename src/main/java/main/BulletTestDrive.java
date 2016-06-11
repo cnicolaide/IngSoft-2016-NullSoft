@@ -3,11 +3,12 @@ package main;
 import controller.BulletController;
 import controller.ControllerInterface;
 import model.BulletModel;
+import model.BulletModelInterface;
 
 public class BulletTestDrive {
 
 	public static void main(String[] args) {
-		BulletModel bulletModel = new BulletModel();
+		BulletModelInterface bulletModel = new BulletModel();
 		ControllerInterface bulletController = new BulletController(bulletModel);
 	}
 }
