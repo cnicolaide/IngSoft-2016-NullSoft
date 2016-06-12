@@ -2,8 +2,6 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
-import java.awt.Rectangle;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -28,7 +26,7 @@ public class BulletView extends DJView {
 
 	public void createView() {
 		viewFrame = new JFrame("View");
-		viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		viewFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		viewFrame.setSize(model.getFormSize(), model.getFormSize());
 		p = new Screen(model.getFormSize(), model.getFormSize(), model.getBulletSize());
 		viewPanel = new JPanel(new GridLayout(1, 1));
@@ -48,7 +46,7 @@ public class BulletView extends DJView {
 			p.setY(model.getPosY());
 			p.setDelay(model.getBPM());
 			bpmOutputLabel
-					.setText("Speed: " + model.getBPM() + " Posicion: " + model.getPosX() + ", " + model.getPosY());
+					.setText("Delay: " + model.getBPM() + " Posicion: " + model.getPosX() + ", " + model.getPosY());
 		}
 	}
 }

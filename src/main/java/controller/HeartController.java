@@ -25,7 +25,7 @@ public class HeartController implements ControllerInterface {
 	}
 
 	public void increaseBPM() {
-		HeartModel newmodel = HeartModel.getInstance();
+		HeartModel.getInstance();
 		view.updateBPM();
 	}
 
@@ -34,6 +34,12 @@ public class HeartController implements ControllerInterface {
 
 	@Override
 	public void setBPM(int bpm) {
+	}
+
+	@Override
+	public void newView() {
+		// TODO Auto-generated method stub
+
 	}
 
 }

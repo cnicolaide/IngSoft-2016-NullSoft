@@ -8,7 +8,6 @@ import controller.ControllerInterface;
 import model.BPMObserver;
 import model.BeatModelInterface;
 import model.BeatObserver;
-import model.BulletAdapter;
 import model.BulletObserver;
 
 public class DJView implements ActionListener, BeatObserver, BPMObserver, BulletObserver {
@@ -30,8 +29,8 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 	JMenuItem startMenuItem;
 	JMenuItem stopMenuItem;
 
-	private JComboBox<String> comboBox;
-	
+	private JButton btnView;
+
 	public DJView(ControllerInterface controller, BeatModelInterface model) {
 		this.controller = controller;
 		this.model = model;
@@ -40,41 +39,21 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 		model.registerObserver((BPMObserver) this);
 	}
 
-	/**
-	 * @wbp.parser.entryPoint
-	 */
 	public void createView() {
 		viewPanel = new JPanel(new GridLayout(1, 2));
 		viewFrame = new JFrame("View");
-		viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		viewFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		viewFrame.setSize(new Dimension(100, 80));
 		bpmOutputLabel = new JLabel("offline", SwingConstants.CENTER);
 		beatBar = new BeatBar();
 		beatBar.setValue(0);
-		JPanel bpmPanel = new JPanel(new GridLayout(3, 1));
-
-		comboBox = new JComboBox<String>();
-		comboBox.setMaximumRowCount(3);
-		comboBox.setModel(new DefaultComboBoxModel<String>(new String[] { "BulletModel", "BeatModel", "HeartModel" }));
-		comboBox.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		bpmPanel.add(comboBox);
+		JPanel bpmPanel = new JPanel(new GridLayout(2, 1));
 		bpmPanel.add(beatBar);
 		bpmPanel.add(bpmOutputLabel);
 		viewPanel.add(bpmPanel);
 		viewFrame.getContentPane().add(viewPanel, BorderLayout.CENTER);
 		viewFrame.pack();
 		viewFrame.setVisible(true);
-
-		if (model instanceof model.BulletAdapter) {
-			comboBox.setSelectedIndex(0);
-		} else if (model instanceof model.BeatModel) {
-			comboBox.setSelectedIndex(1);
-		} else if (model instanceof model.HeartAdapter) {
-			comboBox.setSelectedIndex(2);
-		}
 	}
 
 	/**
@@ -116,26 +95,16 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 		menuBar.add(menu);
 		controlFrame.setJMenuBar(menuBar);
 
-		//////////////////////////////////////////
+		if (model instanceof model.BulletAdapter) {
 
-		// mnView = new JMenu("View");
-		// menuBar.add(mnView);
-		//
-		// mntmBeatbar = new JMenuItem("BeatBar");
-		// mntmBeatbar.addActionListener(new ActionListener() {
-		// public void actionPerformed(ActionEvent event) {
-		// }
-		// });
-		// mnView.add(mntmBeatbar);
-		//
-		// mntmScreen = new JMenuItem("Screen");
-		// mntmScreen.addActionListener(new ActionListener() {
-		// public void actionPerformed(ActionEvent event) {
-		// }
-		// });
-		// mnView.add(mntmScreen);
-		// }
-		//////////////////////////////////////////
+			btnView = new JButton("View 2");
+			btnView.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					controller.newView();
+				}
+			});
+			menuBar.add(btnView);
+		}
 
 		bpmTextField = new JTextField(2);
 		bpmLabel = new JLabel("Enter BPM:", SwingConstants.RIGHT);
@@ -213,7 +182,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver, Bullet
 						bpmOutputLabel.setText("Intentos: " + model.getBPM());
 					else if (model instanceof model.BulletAdapter)
 						bpmOutputLabel.setText(
-								"Vel: " + model.getBPM() + " Pos: " + model.getPosX() + ", " + model.getPosY());
+								"Delay: " + model.getBPM() + " Pos: " + model.getPosX() + ", " + model.getPosY());
 				}
 			}
 		}
