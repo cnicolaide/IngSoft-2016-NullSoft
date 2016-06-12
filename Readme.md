@@ -12,7 +12,8 @@
 1. Clonar el repositorio de GitHub
 1. Abrir la consola de sistema cmd
 1. Hacer change directory (cd) a la carpeta del proyecto. Ej: cd C:\Users\myuser\Desktop\IngSoft-2016-NullSoft
-1. Correr el comando gradlew build
+1. Correr el comando gradlew copilarTodo
+2. Acceder a los ejecutables generados en ../build/libs
  
 ## 2- MANEJO DE LAS CONFIGURACIONES
 

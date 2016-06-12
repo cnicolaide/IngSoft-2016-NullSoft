@@ -7,6 +7,42 @@ apply plugin: "eclipse"
 apply plugin: "build-dashboard"
 apply plugin: "wrapper"
 
+task DJTestDrive(type: Jar) {
+	manifest {
+        attributes 'Main-Class': 'main.DJTestDrive'
+    }
+    baseName = 'DJTestDrive'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+task BulletTestDrive(type: Jar) {
+	manifest {
+        attributes 'Main-Class': 'main.BulletTestDrive'
+    }
+    baseName = 'BulletTestDrive'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+task HeartTestDrive(type: Jar) {
+	manifest {
+        attributes 'Main-Class': 'main.HeartTestDrive'
+    }
+    baseName = 'HeartTestDrive'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+task AllInOneTestDrive(type: Jar) {
+	manifest {
+        attributes 'Main-Class': 'main.AllInOneTestDrive'
+    }
+    baseName = 'AllInOneTestDrive'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
 repositories {
     mavenCentral()
 }
@@ -53,3 +89,10 @@ buildscript {
 }
 
 apply plugin: "net.saliman.cobertura"
+
+task compilarTodo() {
+compilarTodo.dependsOn(DJTestDrive)
+compilarTodo.dependsOn(BulletTestDrive)
+compilarTodo.dependsOn(HeartTestDrive)
+compilarTodo.dependsOn(AllInOneTestDrive)
+}
