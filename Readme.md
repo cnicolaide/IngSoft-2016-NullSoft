@@ -178,7 +178,7 @@ Este último punto es importante, ya que si surge un cambio se deberán realizar
 
 - Engineering Manager
 - Release Manager 
-- Uber Scrum Team
+- Uber Scrum Master
 - GPCM
 
 Al ser 3 integrantes en el grupo, todos realizamos diversas tareas que engloban la mayoría de las responsabilidades de los roles nombrados anteriormente. 
@@ -189,7 +189,7 @@ Al ser 3 integrantes en el grupo, todos realizamos diversas tareas que engloban 
 |---------------------	|--------------------------	|--------------------	|
 | Christian Nicolaide 	| cnicolaide@gmail.com     	| Eng. Manager, GPCM 	|
 | Enzo Candotti       	| enzocandotti93@gmail.com 	| Rel. Manager       	|
-| Mauricio Flores     	| elmauri229@gmail.com     	| Uber Scrum Team    	|
+| Mauricio Flores     	| elmauri229@gmail.com     	| Uber Scrum Master    	|
 
 Nuestra forma de trabajo consiste en 2 reuniones semanales en día y horario a convenir según disponibilidad.
 
@@ -226,14 +226,14 @@ La dirección de la herramienta se encuentra definido en la sección superior.
 - Se reproducirá solo una pista de audio que no será posible alterar.
 - El ritmo (BPM) puede ser aumentado y disminuido  en valores que van de 0 a 1000.
 - Se debe poder detener la reproducción de audio y reanudar tantas veces como se desee.
-- El usuario debe poder observar las pulsaciones a través de una representación gráfica.
+- El usuario debe poder observar las el ritmo a través de una representación gráfica.
 - Se debe informar el ritmo al cual se está reproduciendo la música.
 #### BulletModel
 - Se hará rebotar una pelota contra cuatro paredes.
-- La velocidad puede ser aumentada o disminuida.
+- La velocidad puede ser aumentada o disminuida en valores de 0 a 1000.
 - El usuario debe poder observar el movimiento de la pelota a través de una representación gráfica.
 - El usuario no podra modificar la trayectoria de la pelota en el mapa.
-- Se debe poder informar la velocidad y la posición de la pelota cuando esta está en movimiento.
+- Se debe informar la velocidad y posición de la pelota cuando esta está en movimiento.
 
 ### Requerimientos No Funcionales
 
@@ -272,6 +272,13 @@ Se aplica el patrón de arquitectura MVC permitiendo independizar la lógica y l
 
 ## 6- PRUEBAS UNITARIAS Y DEL SISTEMA
 ## 7- DATOS HISTÓRICOS
+
+**Estimación original:** Al iniciar el trabajo practico esperabamos poder resolverlo con facilidad por conocer el lenguaje Java y haber asistido a todas las clases de la materia, estimamos una duracion de 24 hs, distribuidas a lo largo de 2 semanas entre los 3 miembros del equipo. 
+
+**Resultado real:** Despues de comenzar con los primeros diagramas, notamos que teniamos algunas dudas por lo que debimos recurrir a material de apoyo, re-leer varias veces la consigna y evacuar dudas con los profesores. De este modo, nuestro plazo original se vio afectado.
+La distribucion de tareas resulto compleja, debido a la epoca en la que se encaro el trabajo (final de semestre) donde factores externos, hacian dificil las posibilidades de concretar reuniones de equipo presenciales y prolongadas. Los avances mas importantes se debian producir individualmente.
+Tuvimos que expandir el plazo de entrega 1 semana, e incluir mayor cantidad de horas de dedicacion al trabajo.
+
 ## 8- INFORMACIÓN ADICIONAL
  
 Durante la elaboración de este trabajo práctico aprendimos la importancia que tiene el proceso de planificación a la hora de desarrollar software de manera profesional.
