@@ -273,11 +273,11 @@ En este modelo se deberá emular un protector de pantalla, donde se muestra una 
 ## 4- ARQUITECTURA
 Debido a las características del sistema, que contendra diferentes modelos donde habrá ventanas compartidas se opto por utilizar el patrón de arquitectura MVC que nos permitirá independizar la lógica y la parte visual del sistema usando para eso un controlador que administra los procesos sirviendo como puente entre estos.
 
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603251arquitectura.png)
+![](https://github.com/cnicolaide/IngSoft-2016-NullSoft/blob/master/docs/images/Arquitectura.PNG?raw=true)
 
 Se decidió por una cuestión de comodidad a la hora de ubicar los elementos para trabajar agrupar las clases conforme la arquitectura MVC utilizada en:
 
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594456package-structure.png)
+![](https://github.com/cnicolaide/IngSoft-2016-NullSoft/blob/master/docs/images/Package%20Structure.png?raw=true)
 
 En el paquete de Mains se incluyen los diferentes TestDrive que fueron solicitados, los cuales permiten utilizar cada modelo por separado o todos juntos en simultaneo.
 
@@ -304,7 +304,7 @@ La interacción entre los diferentes componentes en el caso del bullet model se 
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603248secuenciabullet.png)
 
 El sistema completo se puede resumir de la siguiente manera:
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9595319clases.png)
+![](https://github.com/cnicolaide/IngSoft-2016-NullSoft/blob/master/docs/images/Clases.png?raw=true)
 
 ## 6- PRUEBAS UNITARIAS Y DEL SISTEMA
 
