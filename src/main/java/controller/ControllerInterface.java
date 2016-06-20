@@ -12,5 +12,7 @@ public interface ControllerInterface {
 	void setBPM(int bpm);
 
 	void newView();
+	
+	int getBPM();
 
 }

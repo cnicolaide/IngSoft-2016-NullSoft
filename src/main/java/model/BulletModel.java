@@ -66,6 +66,8 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 			}
 		} catch (InterruptedException e) {
 			running = false;
+		} catch (IllegalArgumentException e) {
+			
 		}
 	}
 

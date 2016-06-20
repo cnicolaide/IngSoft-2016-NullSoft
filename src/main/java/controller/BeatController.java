@@ -48,4 +48,9 @@ public class BeatController implements ControllerInterface {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public int getBPM() {
+		return model.getBPM();
+	}
 }

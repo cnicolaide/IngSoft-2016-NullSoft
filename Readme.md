@@ -29,7 +29,8 @@ Para ver todos los commits de esta versión, [click aqui](https://github.com/cni
 
 Para ver todos los commits de esta versión, [click aqui](https://github.com/cnicolaide/IngSoft-2016-NullSoft/compare/0.2.0...master).
 
-### Pass/Fail Ratio de sistema.
+### Pass/Fail Ratio de sistema
+![](http://s2.subirimagenes.com/otros/previo/thump_9608158tests.jpghttp://s2.subirimagenes.com/otros/previo/thump_9608158tests.jpg)
 
 ### Bugs conocidos (i.e. no resueltos) en la entrega.
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603262bugs.png)
@@ -232,11 +233,11 @@ El sistema estará compuesto por modelos diferentes que se listan y detallan a c
 
 ### BeatModel
 
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594439activitydiagram1.png)
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594441usecasediagram1.png)
 
 Este modelo debe emular una consola de DJ donde se podrá reproducir una pista de sonido y alterar el ritmo de reproducción conforme se desee. Siendo posible detener y reanudar la reproducción en cualquier momento.
 
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594441usecasediagram1.png)
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594439activitydiagram1.png)
 
 #### Requerimientos Funcionales del Modelo
 - Se reproducirá solo una pista de audio que no será posible alterar.
@@ -287,7 +288,6 @@ En el paquete de Mains se incluyen los diferentes TestDrive que fueron solicitad
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9603250diagramaobjetosbulle.jpg)
 ### Diagramas de Paquetes
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9603255diagramapaquetes.jpg)
-
 ### Diagramas de Secuencias
 #### BeatModel
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9595640secuencia1.jpg)
@@ -296,6 +296,15 @@ En el paquete de Mains se incluyen los diferentes TestDrive que fueron solicitad
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603248secuenciabullet.png)
 
 ## 6- PRUEBAS UNITARIAS Y DEL SISTEMA
+
+Se realizaron una seria de pruebas de unidad básica para garantizar el funcionamiento de las principales actividades de la aplicación. 
+
+![](http://s2.subirimagenes.com/otros/previo/thump_9608161test2.jpg)
+
+Si bien el nivel de cobertura es bajo, las principales actividades están testeadas.
+
+![](http://s2.subirimagenes.com/imagen/previo/thump_9608164test100.png)
+
 ## 7- DATOS HISTÓRICOS
 
 **Estimación original:** Al iniciar el trabajo practico esperábamos poder resolverlo con facilidad por conocer el lenguaje Java y haber asistido a todas las clases de la materia, estimamos una duración de 24 HS, distribuidas a lo largo de 2 semanas entre los 3 miembros del equipo. 

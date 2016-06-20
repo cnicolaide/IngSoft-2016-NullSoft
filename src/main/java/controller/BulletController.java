@@ -49,4 +49,9 @@ public class BulletController implements ControllerInterface {
 		view = new BulletView(this, new BulletAdapter(model));
 		view.createView();
 	}
+	
+	public int getBPM(){
+		return model.getBPM();
+	}
+	
 }

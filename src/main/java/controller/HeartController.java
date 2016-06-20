@@ -42,4 +42,9 @@ public class HeartController implements ControllerInterface {
 
 	}
 
+	@Override
+	public int getBPM() {
+		return 0;
+	}
+
 }
