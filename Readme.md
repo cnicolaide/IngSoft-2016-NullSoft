@@ -282,15 +282,27 @@ Se decidió por una cuestión de comodidad a la hora de ubicar los elementos par
 En el paquete de Mains se incluyen los diferentes TestDrive que fueron solicitados, los cuales permiten utilizar cada modelo por separado o todos juntos en simultaneo.
 
 ## 5- DISEÑO E IMPLEMENTACIÓN
+
+
+![](https://github.com/cnicolaide/IngSoft-2016-NullSoft/blob/master/docs/images/Observer.png?raw=true)
+Utilizamos el patrón Observer para poder relacionar diferentes objetos entre si en torno a uno principal, de modo que, cuando este último cambie, los demás también lo harán. Particularmente en este caso el principal ( o sujeto) seria BulletModelInterface, este conoce a sus observadores, es el encargado de proporcionar la interfaz para añadir y/o quitar observadores.
+El observador concreto sería DJView, este mantiene una referencia al sujeto concreto, y mantiene su estado consistente con el del sujeto.
+El sujeto concreto sería BulletModel el cual se encargará de almacenar ciertos estados de interés y notificar a sus observadores cuando se modificó su estado.
+El observador es BulletObserver, su tarea consiste en definir la interfaz de los objetos a los que se deben notificar cambios en un sujeto.
+
+![](https://github.com/cnicolaide/IngSoft-2016-NullSoft/blob/master/docs/images/strategy.png)
+Utilizamos el patrón Strategy para el controller del sistema, ya que nos permite tener varios algoritmos encapsularlos e ir intercambiandolos a medida que surja la necesidad de hacerlo, ya que tenemos clases que difieren en alunos aspectos, entonces necesitamos tomar ciertas decisiones, respecto al algoritmo a utilizar, en tiempo de ejecución.
+
+![](https://github.com/cnicolaide/IngSoft-2016-NullSoft/blob/master/docs/images/Adapter.png)
+En esta instancia, debemos adaptar el modelo del BeatModel a uno de BulletModel. Si no lo hacemos, la vista no será capaz de trabajar con este modelo.
+Para esto utilizamos el patrón Adapter, que nos permite adaptar un modelo para trabajar con controladores y vistas existentes. Es una técnica muy utilizada en MVC.
+La clase BullerAdapter implementa la interfaz BeatModelInterface. Tendrá como atributo un objeto del tipo BulletModelInterface, por lo que aquí hacemos referencia a nuestro modelo. Habrá métodos que no se utilizarán para nuestro nuevo modelo, y otros que necesitamos que se adapten (el método getBPM(), por ejemplo).
+
 ### Diagramas de Clase
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9595319clases.png)
 ### Diagramas de Objeto
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9603250diagramaobjetosbulle.jpg)
-### Diagramas de Paquetes
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9603255diagramapaquetes.jpg)
 ### Diagramas de Secuencias
-#### BeatModel
-#### BulletModel
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603248secuenciabullet.png)
 
 ## 6- PRUEBAS UNITARIAS Y DEL SISTEMA
