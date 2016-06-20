@@ -30,7 +30,7 @@ Para ver todos los commits de esta versión, [click aqui](https://github.com/cni
 Para ver todos los commits de esta versión, [click aqui](https://github.com/cnicolaide/IngSoft-2016-NullSoft/compare/0.2.0...master).
 
 ### Pass/Fail Ratio de sistema
-![](http://s2.subirimagenes.com/otros/previo/thump_9608158tests.jpghttp://s2.subirimagenes.com/otros/previo/thump_9608158tests.jpg)
+![](http://s2.subirimagenes.com/otros/previo/thump_9608158tests.jpg)
 
 ### Bugs conocidos (i.e. no resueltos) en la entrega.
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603262bugs.png)
@@ -275,7 +275,7 @@ Debido a las características del sistema, que contendra diferentes modelos dond
 
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603251arquitectura.png)
 
-**Se decidió por una cuestión de comodidad a la hora de ubicar los elementos para trabajar agrupar las clases conforme la arquitectura MVC utilizada en:**
+Se decidió por una cuestión de comodidad a la hora de ubicar los elementos para trabajar agrupar las clases conforme la arquitectura MVC utilizada en:
 
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594456package-structure.png)
 
@@ -290,8 +290,6 @@ En el paquete de Mains se incluyen los diferentes TestDrive que fueron solicitad
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9603255diagramapaquetes.jpg)
 ### Diagramas de Secuencias
 #### BeatModel
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9595640secuencia1.jpg)
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9595644secuencia2.jpg)
 #### BulletModel
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603248secuenciabullet.png)
 
@@ -303,7 +301,7 @@ Se realizaron una seria de pruebas de unidad básica para garantizar el funciona
 
 Si bien el nivel de cobertura es bajo, las principales actividades están testeadas.
 
-![](http://s2.subirimagenes.com/imagen/previo/thump_9608164test100.png)
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9608164test100.png)
 
 ## 7- DATOS HISTÓRICOS
 
