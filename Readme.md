@@ -4,8 +4,33 @@
 
 ## 1- NOTA DE ENTREGA
 
-### Listado de la funcionalidad incluida (con el estado de implementación de c/u).
+### Listado de la funcionalidad incluida 
+
+#### 0.1.0
+
+* Se arma arquitectura de trabajo.
+* Se implementa singleton en el HeartModel.
+* Se implementan los metodos del panel de control del modelo Heart.
+* Se agrega a la DJView texto para cuando esta vista es utilizada por el modelo Heart.
+
+Para ver todos los commits de esta versión, [click aqui](https://github.com/cnicolaide/IngSoft-2016-NullSoft/compare/0.1.0...0.2.0).
+
+#### 0.2.0
+
+##### Nuevas Características / Mejoras
+
+* Se agrega el modelo Bullet y un TestDrive para su ejecucion directa.
+* Se agrega una vista propia para el modelo Bullet.
+* Se agrega un TestDrive para ejecutar los 3 modelos (Bullet, Heart y Beat) en simultaneo.
+
+##### Bug Fixes
+
+* Se resuelve problema con delay debajo de 50 en vista Bullet.
+
+Para ver todos los commits de esta versión, [click aqui](https://github.com/cnicolaide/IngSoft-2016-NullSoft/compare/0.2.0...master).
+
 ### Pass/Fail Ratio de sistema.
+
 ### Bugs conocidos (i.e. no resueltos) en la entrega.
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603262bugs.png)
 ### Lugar/link del entregable y de las instrucciones de instalación.
@@ -137,7 +162,7 @@ Los criterios para modificar (incrementar) cada uno de los contadores de la etiq
 - **major**: nuevas funcionalidades claves de la aplicación respecto a la versión anterior debido a la inclusión de nuevos requerimientos para el sistema, como la inclusión de nuevos módulos o una revisión completa de los existentes.
 - **minor**: cambios significativos en la forma en la que se ofrece la funcionalidad existente, corrección de grandes fallos del sistema o nuevas versiones evolutivas que modifican significativamente la funcionalidad ofrecida.
 - **revision**: se modifica por cada entrega de software que se realice.
-- **entrega**: al rechazarse una entrega se incrementa este contador en la siguiente. Cuando la entrega se aceptase se crearía un tag público que solo conservaría los tres primeros dígitos (mayor, minor, revision).
+- **entrega**: al rechazarse una entrega se incrementa este contador en la siguiente. Cuando la entrega se aceptase se crearía un tag público que solo conservaría los tres primeros dígitos (mayor, minor, revisión).
 
 De esta forma se puede visualizar el árbol de entregables con la siguiente estructura
 
@@ -203,64 +228,57 @@ La dirección de la herramienta se encuentra definido en la sección superior.
 
 ## 3- REQUERIMIENTOS
 
-### Diagramas de Casos de Usos
-#### BeatModel
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594441usecasediagram1.png)
-#### BulletModel
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603244casodeusobullet.png)
-### Diagramas de Actividades
-#### BeatModel
+El sistema estará compuesto por modelos diferentes que se listan y detallan a continuación:
+
+### BeatModel
+
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594439activitydiagram1.png)
-#### BulletModel
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603247actividades-bullet.png)
-### Diagramas de Secuencias
-#### BeatModel
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9595640secuencia1.jpg)
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9595644secuencia2.jpg)
-#### BulletModel
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603248secuenciabullet.png)
 
-### Requerimientos Funcionales
+Este modelo debe emular una consola de DJ donde se podrá reproducir una pista de sonido y alterar el ritmo de reproducción conforme se desee. Siendo posible detener y reanudar la reproducción en cualquier momento.
 
-#### BeatModel
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594441usecasediagram1.png)
+
+#### Requerimientos Funcionales del Modelo
 - Se reproducirá solo una pista de audio que no será posible alterar.
 - El ritmo (BPM) puede ser aumentado y disminuido  en valores que van de 0 a 1000.
 - Se debe poder detener la reproducción de audio y reanudar tantas veces como se desee.
-- El usuario debe poder observar las el ritmo a través de una representación gráfica.
 - Se debe informar el ritmo al cual se está reproduciendo la música.
-#### BulletModel
-- Se hará rebotar una pelota contra cuatro paredes.
-- La velocidad puede ser aumentada o disminuida en valores de 0 a 1000.
+
+### BulletModel
+
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603244casodeusobullet.png)
+
+En este modelo se deberá emular un protector de pantalla, donde se muestra una bolita en movimiento con una trayectoria y mapa definido inicialmente que no sera posible alterar luego.
+
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603247actividades-bullet.png)
+
+#### Requerimientos Funcionales del Modelo
+- Se debe hacer rebotar una pelota contra cuatro paredes.
+- El usuario no podrá modificar la trayectoria de la pelota en el mapa.
+- La velocidad puede ser aumentada o disminuida en valores de 0 a 1000 mili segundos.
 - El usuario debe poder observar el movimiento de la pelota a través de una representación gráfica.
-- El usuario no podra modificar la trayectoria de la pelota en el mapa.
 - Se debe informar la velocidad y posición de la pelota cuando esta está en movimiento.
 
-### Requerimientos No Funcionales
+### Requerimientos Funcionales del Sistema
+- La ventana de control debe de tener el mismo aspecto en los 3 modelos. Un campo y botón para setear el tempo, un botón para incrementar y otro para decrementar.
+- Se deben de poder ejecutar los 3 modelos en simultaneo.
+
+### Requerimientos No Funcionales del Sistema
 
 - Toda funcionalidad del sistema y transacción de negocio debe responder al usuario en menos de 2 segundos.
-- El sistema debe proporcionar mensajes de error que sean informativos y orientados a usuario final.
 - El tiempo de aprendizaje del sistema por un usuario deberá ser menor a 5 minutos.
-- El sistema debe poseer interfaces gráficas bien formadas.
 - El tiempo para iniciar o reiniciar el sistema no podrá ser mayor a 15 segundos.
-- La probabilidad de falla del Sistema no podrá ser mayor a 1%.
-
-### Diagrama de Arquitectura Preliminar
-
-#### BulletModel
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9603258arquitecturaprelimin.jpg)
-
-### Matriz de Trazabilidad
-![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603259trazabilidad.png)
 
 ## 4- ARQUITECTURA
+Debido a las características del sistema, que contendra diferentes modelos donde habrá ventanas compartidas se opto por utilizar el patrón de arquitectura MVC que nos permitirá independizar la lógica y la parte visual del sistema usando para eso un controlador que administra los procesos sirviendo como puente entre estos.
 
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603251arquitectura.png)
 
-Se aplica el patrón de arquitectura MVC permitiendo independizar la lógica y la parte visual del sistema usando para eso un controlador que administra los procesos sirviendo como puente entre estos.
-
-**La agrupación de clases de nuestro sistema es:**
+**Se decidió por una cuestión de comodidad a la hora de ubicar los elementos para trabajar agrupar las clases conforme la arquitectura MVC utilizada en:**
 
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9594456package-structure.png)
+
+En el paquete de Mains se incluyen los diferentes TestDrive que fueron solicitados, los cuales permiten utilizar cada modelo por separado o todos juntos en simultaneo.
 
 ## 5- DISEÑO E IMPLEMENTACIÓN
 ### Diagramas de Clase
@@ -270,14 +288,21 @@ Se aplica el patrón de arquitectura MVC permitiendo independizar la lógica y l
 ### Diagramas de Paquetes
 ![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9603255diagramapaquetes.jpg)
 
+### Diagramas de Secuencias
+#### BeatModel
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9595640secuencia1.jpg)
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9595644secuencia2.jpg)
+#### BulletModel
+![](http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9603248secuenciabullet.png)
+
 ## 6- PRUEBAS UNITARIAS Y DEL SISTEMA
 ## 7- DATOS HISTÓRICOS
 
-**Estimación original:** Al iniciar el trabajo practico esperabamos poder resolverlo con facilidad por conocer el lenguaje Java y haber asistido a todas las clases de la materia, estimamos una duracion de 24 hs, distribuidas a lo largo de 2 semanas entre los 3 miembros del equipo. 
+**Estimación original:** Al iniciar el trabajo practico esperábamos poder resolverlo con facilidad por conocer el lenguaje Java y haber asistido a todas las clases de la materia, estimamos una duración de 24 HS, distribuidas a lo largo de 2 semanas entre los 3 miembros del equipo. 
 
-**Resultado real:** Despues de comenzar con los primeros diagramas, notamos que teniamos algunas dudas por lo que debimos recurrir a material de apoyo, re-leer varias veces la consigna y evacuar dudas con los profesores. De este modo, nuestro plazo original se vio afectado.
-La distribucion de tareas resulto compleja, debido a la epoca en la que se encaro el trabajo (final de semestre) donde factores externos, hacian dificil las posibilidades de concretar reuniones de equipo presenciales y prolongadas. Los avances mas importantes se debian producir individualmente.
-Tuvimos que expandir el plazo de entrega 1 semana, e incluir mayor cantidad de horas de dedicacion al trabajo.
+**Resultado real:** Después de comenzar con los primeros diagramas, notamos que teníamos algunas dudas por lo que debimos recurrir a material de apoyo, re-leer varias veces la consigna y evacuar dudas con los profesores. De este modo, nuestro plazo original se vio afectado.
+La distribución de tareas resulto compleja, debido a la época en la que se encaro el trabajo (final de semestre) donde factores externos, hacían difícil las posibilidades de concretar reuniones de equipo presenciales y prolongadas. Los avances mas importantes se debían producir individualmente.
+Tuvimos que expandir el plazo de entrega 1 semana, e incluir mayor cantidad de horas de dedicación al trabajo.
 
 ## 8- INFORMACIÓN ADICIONAL
  
