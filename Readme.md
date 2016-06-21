@@ -283,21 +283,24 @@ En el paquete de Mains se incluyen los diferentes TestDrive que fueron solicitad
 
 ## 5- DISEÑO E IMPLEMENTACIÓN
 
+Para garantizar que el modelo Heart sólo tenga una instancia y proporcionar un punto de acceso global utilizamos el patron **Singleton**.
+Lo implementamos creando en nuestra clase un método que crea una instancia del objeto sólo si todavía no existe alguna. Para asegurar que la clase no puede ser instanciada nuevamente colocamos el constructor como privado.
+
 ![](https://github.com/cnicolaide/IngSoft-2016-NullSoft/blob/master/docs/images/Observer.png?raw=true)
 
-Utilizamos el patrón Observer para poder relacionar diferentes objetos entre si en torno a uno principal, de modo que, cuando este último cambie, los demás también lo harán. Particularmente en este caso el principal ( o sujeto) seria BulletModelInterface, este conoce a sus observadores, es el encargado de proporcionar la interfaz para añadir y/o quitar observadores.
+Utilizamos el patrón **Observer** para poder relacionar diferentes objetos entre si en torno a uno principal, de modo que, cuando este último cambie, los demás también lo harán. Particularmente en este caso el principal ( o sujeto) seria BulletModelInterface, este conoce a sus observadores, es el encargado de proporcionar la interfaz para añadir y/o quitar observadores.
 El observador concreto sería DJView, este mantiene una referencia al sujeto concreto, y mantiene su estado consistente con el del sujeto.
 El sujeto concreto sería BulletModel el cual se encargará de almacenar ciertos estados de interés y notificar a sus observadores cuando se modificó su estado.
 El observador es BulletObserver, su tarea consiste en definir la interfaz de los objetos a los que se deben notificar cambios en un sujeto.
 
 ![](https://github.com/cnicolaide/IngSoft-2016-NullSoft/blob/master/docs/images/strategy.png)
 
-Utilizamos el patrón Strategy para el controller del sistema, ya que nos permite tener varios algoritmos encapsularlos e ir intercambiandolos a medida que surja la necesidad de hacerlo, ya que tenemos clases que difieren en alunos aspectos, entonces necesitamos tomar ciertas decisiones, respecto al algoritmo a utilizar, en tiempo de ejecución.
+Utilizamos el patrón **Strategy** para el controller del sistema, ya que nos permite tener varios algoritmos encapsularlos e ir intercambiandolos a medida que surja la necesidad de hacerlo, ya que tenemos clases que difieren en alunos aspectos, entonces necesitamos tomar ciertas decisiones, respecto al algoritmo a utilizar, en tiempo de ejecución.
 
 ![](https://github.com/cnicolaide/IngSoft-2016-NullSoft/blob/master/docs/images/Adapter.png)
 
 En esta instancia, debemos adaptar el modelo del BeatModel a uno de BulletModel. Si no lo hacemos, la vista no será capaz de trabajar con este modelo.
-Para esto utilizamos el patrón Adapter, que nos permite adaptar un modelo para trabajar con controladores y vistas existentes. Es una técnica muy utilizada en MVC.
+Para esto utilizamos el patrón **Adapter**, que nos permite adaptar un modelo para trabajar con controladores y vistas existentes. Es una técnica muy utilizada en MVC.
 La clase BullerAdapter implementa la interfaz BeatModelInterface. Tendrá como atributo un objeto del tipo BulletModelInterface, por lo que aquí hacemos referencia a nuestro modelo. Habrá métodos que no se utilizarán para nuestro nuevo modelo, y otros que necesitamos que se adapten (el método getBPM(), por ejemplo).
 
 La interacción entre los diferentes componentes en el caso del bullet model se da de la siguiente manera:
