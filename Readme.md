@@ -283,6 +283,8 @@ En el paquete de Mains se incluyen los diferentes TestDrive que fueron solicitad
 
 ## 5- DISEÑO E IMPLEMENTACIÓN
 
+![](https://github.com/cnicolaide/IngSoft-2016-NullSoft/blob/master/docs/images/singleton.png?raw=true)
+
 Para garantizar que el modelo Heart sólo tenga una instancia y proporcionar un punto de acceso global utilizamos el patron **Singleton**.
 Lo implementamos creando en nuestra clase un método que crea una instancia del objeto sólo si todavía no existe alguna. Para asegurar que la clase no puede ser instanciada nuevamente colocamos el constructor como privado.
 
