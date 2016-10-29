@@ -1,10 +1,21 @@
 apply plugin: 'java'
+apply plugin: 'checkstyle'
 apply plugin: 'pmd'
+apply plugin: "de.aaschmid.cpd"
 apply plugin: 'findbugs'
-apply plugin: "idea"
-apply plugin: "eclipse"
-apply plugin: "build-dashboard"
+apply plugin: "jacoco"
 apply plugin: "wrapper"
+
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "de.aaschmid:gradle-cpd-plugin:1.0"
+  }
+}
 
 task DJTestDrive(type: Jar) {
 	manifest {
@@ -50,8 +61,48 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+checkstyle {
+    ignoreFailures = true
+    toolVersion = '6.4.1'
+    sourceSets = [sourceSets.main]
+    configFile = rootProject.file("config/checkstyle/checkstyle.xml");
+    showViolations = true
+}
+
+checkstyleTest {
+    enabled = false
+}
+
 pmd {
     ignoreFailures = true
+}
+
+cpd {
+    ignoreFailures = true
+}
+
+findbugs {
+    ignoreFailures = true
+    effort = "max"
+    reportLevel = "low"
+}
+
+jacoco {
+    toolVersion = "0.7.6.201602180812"
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+
+tasks.withType(Checkstyle) {
+  reports {
+    xml.enabled = false
+    html.enabled = true
+  }
 }
 
 tasks.withType(Pmd) {
@@ -61,18 +112,14 @@ tasks.withType(Pmd) {
     }
 }
 
-findbugs {
-    ignoreFailures = true
-    effort = "max"
-    reportLevel = "low"
-}
-
 tasks.withType(FindBugs) {
     reports {
         xml.enabled = false
         html.enabled = true
     }
 }
+
+test.finalizedBy(project.tasks.jacocoTestReport)
 
 task compilarTodo() {
 compilarTodo.dependsOn(DJTestDrive)
