@@ -5,6 +5,7 @@ sudo: required
 
 before_install:
  - chmod +x gradlew
+ - ./gradlew test --debug
 
 before_script:
   - "export DISPLAY=:99.0"
