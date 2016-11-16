@@ -14,5 +14,4 @@ public interface ControllerInterface {
 	void newView();
 	
 	int getBPM();
-
 }

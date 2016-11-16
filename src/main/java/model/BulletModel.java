@@ -173,6 +173,10 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 		this.delay = delay;
 		notifyBulletObservers();
 	}
+	
+	public int getDir() {
+		return dir;
+	}
 
 	public int getX() {
 		return x;
@@ -193,5 +197,24 @@ public class BulletModel extends Canvas implements BulletModelInterface, Runnabl
 	public int getBulletSize() {
 		return bulletSize;
 	}
-
+	
+	public void setDir(int direction) {
+		this.dir= direction;
+	}
+	
+	public void setX(int x) {
+		this.x = x;
+	}
+	public void setY(int y) {
+		this.y = y;
+	}
+	
+	public int getRectHeightLimit() {
+		return rect.height - bulletSize;
+	}
+	
+	public int getRectWidthLimit() {
+		return rect.width - bulletSize;
+	}
+	
 }
