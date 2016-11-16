@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>com.jbehave.test.bullet_story</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: txt"><![CDATA[
+Bullet story
+(com/jbehave/test/bullet_story.story)
+Narrative:
+In order to make sure that the bullet is moving correctly
+As a developer
+I want to use Behaviour-Driven Development
+ -direction should be a value between 1 and 4
+ -Given and Then directions should be equal
+Scenario: The bullet moves in direction 1
+Given The bullet direction is 1
+When the bullet moves
+Then the bullet should move in direction 1
+
+Scenario: The bullet moves in direction 2
+Given The bullet direction is 2
+When the bullet moves
+Then the bullet should move in direction 2
+
+Scenario: The bullet moves in direction 3
+Given The bullet direction is 3
+When the bullet moves
+Then the bullet should move in direction 3
+
+Scenario: The bullet moves in direction 4
+Given The bullet direction is 4
+When the bullet moves
+Then the bullet should move in direction 4
+
+
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>
