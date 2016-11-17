@@ -1,8 +1,10 @@
 package unitTest;
 
-import static org.junit.Assert.*;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Before;
+import org.junit.Test;
 
 import controller.BeatController;
 import controller.ControllerInterface;

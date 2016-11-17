@@ -51,6 +51,7 @@ crashlytics-build.properties
 build/
 buildsrc/
 bin/
+target/
 
 # Ignore Gradle GUI config
 gradle-app.setting

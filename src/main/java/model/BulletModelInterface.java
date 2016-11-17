@@ -11,7 +11,7 @@ public interface BulletModelInterface {
 	void setBPM(int bpm);
 
 	int getBPM();
-	
+
 	int getDir();
 
 	void registerObserver(BeatObserver o);
@@ -33,14 +33,14 @@ public interface BulletModelInterface {
 	int getFormSize();
 
 	int getBulletSize();
-	
+
 	void setDir(int dir);
-	
+
 	void setX(int x);
-	
+
 	void setY(int y);
-	
+
 	int getRectHeightLimit();
-	
+
 	int getRectWidthLimit();
 }

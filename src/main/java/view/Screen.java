@@ -1,6 +1,8 @@
 package view;
 
-import java.awt.*;
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Graphics;
 
 @SuppressWarnings("serial")
 public class Screen extends Canvas implements Runnable {

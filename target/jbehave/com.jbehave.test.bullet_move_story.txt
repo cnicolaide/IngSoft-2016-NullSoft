@@ -1,8 +1,0 @@
-
-(com/jbehave/test/bullet_move_story.story)
-Scenario: 
-Given The direction of the bullet is 2
-When the bullet moves
-Then the bullet should move in direction 2
-
-

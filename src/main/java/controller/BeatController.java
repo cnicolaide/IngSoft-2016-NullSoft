@@ -46,7 +46,7 @@ public class BeatController implements ControllerInterface {
 	@Override
 	public void newView() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
